@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traction-Based Angel Investing in Bangladesh (Part 1) — Capallo Blog</title>
+  <meta name="description" content="Here's how investors can spot the one startup that 10Xs out of 90% of failures in Bangladesh. The three signals most investors completely ignore.">
+  <meta name="keywords" content="traction based investing Bangladesh, angel investing signals, startup metrics Bangladesh, venture investing, retention metrics startup">
+  <meta property="og:title" content="Traction-Based Angel Investing in Bangladesh (Part 1) — Capallo Blog">
+  <meta property="og:description" content="How investors can spot the one startup that 10Xs out of 90% of failures. Three signals most investors completely ignore.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter, system-ui, sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0f3460;
+      --dark-navy: #16213e;
+      --near-black: #1a1a2e;
+      --gold: #fbbf24;
+      --green: #10b981;
+      --red: #ef4444;
+      --body: #4a5568;
+      --light-bg: #f7fafc;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--near-black);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s;
+    }
+    .nav-container {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 3rem;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; width: auto; }
+    .nav-blog-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold);
+      border-left: 2px solid var(--border); padding-left: 0.75rem;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; display: inline-block; }
+    .btn-primary { background: var(--navy); color: white; }
+    .btn-primary:hover { background: var(--dark-navy); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,52,96,0.3); }
+    .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding: 130px 3rem 60px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      color: white;
+    }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .series-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(251,191,36,0.2); color: var(--gold);
+      padding: 0.35rem 0.9rem; border-radius: 20px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 1.25rem;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem;
+    }
+    .article-hero .subtitle {
+      font-size: 1.15rem; color: rgba(255,255,255,0.82);
+      line-height: 1.7; margin-bottom: 2rem; max-width: 700px;
+    }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge {
+      background: rgba(251,191,36,0.2); color: var(--gold);
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px;
+    }
+
+    /* ── LAYOUT ── */
+    .article-layout {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 320px;
+      gap: 4rem; padding: 4rem 3rem; align-items: start;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body { min-width: 0; }
+    .article-body h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.9rem; font-weight: 700; color: var(--navy);
+      margin: 2.5rem 0 1rem; line-height: 1.3;
+    }
+    .article-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--near-black); margin: 1.75rem 0 0.75rem; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+
+    /* Lead */
+    .article-lead {
+      font-size: 1.15rem; color: #2d3748; line-height: 1.85;
+      border-left: 4px solid var(--gold); padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem; font-weight: 700; color: var(--navy);
+      line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem;
+      border-left: 5px solid var(--gold); margin: 2.5rem 0;
+      background: rgba(15,52,96,0.03); border-radius: 0 12px 12px 0;
+    }
+
+    /* Signal cards */
+    .signal-card {
+      border-radius: 14px; padding: 2.5rem;
+      margin: 2rem 0; border: 2px solid var(--border);
+      transition: box-shadow 0.2s;
+    }
+    .signal-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .signal-number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; background: var(--navy); color: white;
+      border-radius: 50%; font-weight: 800; font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    .signal-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.5rem; line-height: 1.3;
+    }
+    .signal-subtitle { font-size: 1rem; color: var(--body); margin-bottom: 1.5rem; line-height: 1.7; }
+
+    /* Good vs bad grid */
+    .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .vs-card { border-radius: 10px; padding: 1.5rem; }
+    .vs-card.bad { background: #fff5f5; border: 1.5px solid #fecaca; }
+    .vs-card.good { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+    .vs-card .vs-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .vs-card.bad .vs-label { color: #dc2626; }
+    .vs-card.good .vs-label { color: #16a34a; }
+    .vs-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .vs-card ul li {
+      font-size: 0.9rem; color: var(--body); line-height: 1.5;
+      display: flex; align-items: flex-start; gap: 0.5rem;
+    }
+    .vs-card ul li::before { flex-shrink: 0; font-weight: 700; margin-top: 0.05rem; }
+    .vs-card.bad ul li::before { content: "✗"; color: #dc2626; }
+    .vs-card.good ul li::before { content: "✓"; color: #16a34a; }
+
+    /* Analogy box */
+    .analogy-box {
+      background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%);
+      border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white;
+    }
+    .analogy-box .analogy-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .analogy-box p { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.8; margin-bottom: 0; }
+    .analogy-box strong { color: white; }
+
+    /* Metric highlight */
+    .metric-highlight {
+      display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;
+    }
+    .metric-pill {
+      background: var(--light-bg); border: 1px solid var(--border);
+      border-radius: 8px; padding: 1rem 1.25rem;
+      flex: 1; min-width: 140px; text-align: center;
+    }
+    .metric-pill .metric-val {
+      font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem;
+    }
+    .metric-pill .metric-desc { font-size: 0.8rem; color: var(--body); line-height: 1.4; }
+
+    /* Warning box */
+    .warning-box {
+      background: #fff8f0; border-left: 5px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 1.5rem; margin: 2rem 0;
+    }
+    .warning-box p { font-size: 0.95rem; color: #78350f; line-height: 1.75; margin: 0; }
+
+    /* Danger box */
+    .danger-box {
+      background: #fff5f5; border-left: 5px solid var(--red);
+      border-radius: 0 10px 10px 0; padding: 1.5rem; margin: 2rem 0;
+    }
+    .danger-box p { font-size: 0.95rem; color: #991b1b; line-height: 1.75; margin: 0; }
+
+    /* Part nav */
+    .part-nav {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0;
+    }
+    .part-nav-card {
+      border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem;
+      text-decoration: none; color: inherit; transition: all 0.2s;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.next { text-align: right; border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    /* Key takeaway */
+    .takeaway-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white;
+    }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* Coffee CTA */
+    .coffee-cta {
+      background: var(--light-bg); border-radius: 12px;
+      padding: 2rem; text-align: center; margin: 3rem 0;
+      border: 1px solid var(--border);
+    }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #FFDD00; color: #000; padding: 0.8rem 2rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800;
+    }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    /* Share bar */
+    .share-bar {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.5rem 0; border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap;
+    }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem;
+      font-weight: 600; text-decoration: none; transition: all 0.2s;
+      border: 1px solid var(--border); color: var(--body);
+    }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card {
+      background: var(--light-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem;
+    }
+    .sidebar-card h4 {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a {
+      color: var(--body); text-decoration: none; font-size: 0.88rem;
+      line-height: 1.5; display: block; padding: 0.4rem 0.6rem;
+      border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent;
+    }
+    .toc-list li a:hover { color: var(--navy); background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: 12px; padding: 1.75rem; text-align: center;
+    }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a {
+      display: block; background: white; color: var(--navy);
+      padding: 0.75rem; border-radius: 7px; font-weight: 700;
+      font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem;
+    }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline {
+      background: transparent; color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    /* Series card */
+    .series-card {
+      border: 2px solid rgba(15,52,96,0.15); border-radius: 12px;
+      padding: 1.5rem; margin-bottom: 1.5rem; background: white;
+    }
+    .series-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li a {
+      font-size: 0.87rem; color: var(--body); text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0;
+      transition: color 0.2s; line-height: 1.4;
+    }
+    .series-list li a:hover { color: var(--navy); }
+    .series-list li a.current { color: var(--navy); font-weight: 600; }
+    .series-list li a .part-dot {
+      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 700;
+    }
+    .series-list li a.current .part-dot { background: var(--navy); color: white; }
+    .series-list li a:not(.current) .part-dot { background: var(--border); color: var(--body); }
+
+    /* Back link */
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--body); text-decoration: none; font-size: 0.88rem;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--navy); }
+    .back-link:hover svg { transform: translateX(-3px); }
+    .back-link svg { transition: transform 0.2s; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .vs-grid { grid-template-columns: 1fr; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Traction-Based Angel Investing — Part 1</span>
+    </div>
+    <div class="series-badge">📈 Series — Part 1 of 2</div>
+    <h1>Traction-Based Angel Investing in Bangladesh</h1>
+    <p class="subtitle">Here's how investors can spot the one that 10Xs out of 90% of startup failures — using three signals most investors completely ignore.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        7 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Traction Investing</span>
+    </div>
+  </div>
+</section>
+
+<!-- BACK LINK -->
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="article-layout">
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p class="article-lead">
+      You might be thinking that finding winning startups is all about viral LinkedIn posts, a fancy pitch deck, or that first hundred thousand in funding. But what if that's exactly how 90% of startups die?
+    </p>
+
+    <p>Chasing the wrong metrics is like trying to win a Formula 1 race by counting how many pigeons you hit along the way. It's not just useless — <strong>it's dangerously distracting.</strong></p>
+
+    <div class="analogy-box">
+      <div class="analogy-label">🏭 A Lesson from the Industrial Revolution</div>
+      <p>During the Industrial Revolution, factory owners obsessed over one thing above all else: <strong>how many quality units they could produce per hour.</strong> Not how many workers they hired. Not how big the factory was. Just output. That single focus revolutionized the entire world economy.</p>
+      <p style="margin-top:1rem;">Early startup growth is no different. The secret isn't going viral. It's measuring the right metric.</p>
+    </div>
+
+    <p>And it all comes down to <strong>three signals most investors completely ignore.</strong></p>
+
+    <hr class="article-divider">
+
+    <!-- SIGNAL 1 -->
+    <h2 id="signal-1">Signal #1 — Retention, Not Acquisition</h2>
+
+    <div class="signal-card">
+      <div class="signal-number">1</div>
+      <div class="signal-title">Stop Counting Sign-Ups</div>
+      <p class="signal-subtitle">Sign-ups are a vanity metric — something that looks impressive on the surface but tells you almost nothing about the health of a business. The question that actually matters is: <strong>How many users are still active after Day 7? After Day 30?</strong></p>
+
+      <div class="pull-quote" style="font-size:1.25rem; margin: 1.5rem 0;">
+        If users leave, the startup is not growing. It's leaking.
+      </div>
+
+      <p>Don't let founders fool you with download counts and registration numbers. Here's the full picture of what to avoid — and what to demand instead.</p>
+
+      <div class="vs-grid">
+        <div class="vs-card bad">
+          <div class="vs-label">🚫 Vanity Metrics — Avoid</div>
+          <ul>
+            <li>App downloads (without retention or active usage)</li>
+            <li>Website visits / page views (without conversion data)</li>
+            <li>Registered users (if most never return or buy)</li>
+            <li>Social media followers / likes</li>
+            <li>Press mentions or awards</li>
+            <li>Close affiliation with "Uncle Rahman at the golf club"</li>
+          </ul>
+        </div>
+        <div class="vs-card good">
+          <div class="vs-label">✅ Real Metrics — Demand These</div>
+          <ul>
+            <li>Revenue & revenue growth rate</li>
+            <li>Gross margins (higher = more capital-efficient scaling)</li>
+            <li>Customer retention / churn rate</li>
+            <li>CAC vs LTV (Customer Acquisition Cost vs Lifetime Value)</li>
+            <li>Unit economics (positive contribution margin per unit)</li>
+            <li>MAUs / DAUs with engagement depth</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="warning-box" style="margin-top:1.5rem; margin-bottom:0;">
+        <p>⚠️ <strong>Why vanity metrics are dangerous:</strong> They inflate perception without showing whether customers are actually paying, staying, or creating long-term value. They can also signal that a founder is more focused on <em>appearance</em> than business fundamentals — a red flag you can't afford to ignore.</p>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SIGNAL 2 -->
+    <h2 id="signal-2">Signal #2 — Quality, Not Quantity</h2>
+
+    <div class="signal-card">
+      <div class="signal-number">2</div>
+      <div class="signal-title">10 Paying Customers Beat 1,000 Free Users</div>
+      <p class="signal-subtitle">One thousand users who never pay are worth less than ten paying customers who love the product and believe in the company's vision. The metric that reveals this is simple.</p>
+
+      <div class="metric-highlight">
+        <div class="metric-pill">
+          <div class="metric-val">1,000</div>
+          <div class="metric-desc">Free users who never pay</div>
+        </div>
+        <div style="display:flex; align-items:center; font-size:1.5rem; color:#9ca3af; padding:0 0.5rem;">vs</div>
+        <div class="metric-pill" style="border-color:var(--navy); background:rgba(15,52,96,0.04);">
+          <div class="metric-val" style="color:var(--green);">10</div>
+          <div class="metric-desc">Paying customers who love the product</div>
+        </div>
+      </div>
+
+      <p>The second group wins every time. Track <strong>revenue per user</strong>, not just user count. A founder who knows their revenue per user deeply understands their business. One who only knows their total user count probably doesn't.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SIGNAL 3 -->
+    <h2 id="signal-3">Signal #3 — Velocity, Not Volume</h2>
+
+    <div class="signal-card">
+      <div class="signal-number">3</div>
+      <div class="signal-title">How Fast Can the Founder Learn and Build?</div>
+      <p class="signal-subtitle">In the startup world, speed of learning beats absolutely everything. A founder who runs 10 experiments a month will outpace a founder who spends 6 months perfecting one feature every single time.</p>
+
+      <p>The metric to measure: <strong>Building cycle time.</strong></p>
+
+      <div class="analogy-box" style="margin:1.5rem 0;">
+        <div class="analogy-label">⏱️ The Velocity Test</div>
+        <p>Ask the founder: <strong>How long does it take you from idea → test → result?</strong></p>
+        <p style="margin-top:0.75rem;">A great founder should have a concrete, recent example. If they struggle to answer, that tells you something important about how they operate under pressure.</p>
+      </div>
+
+      <div class="danger-box" style="margin-bottom:0;">
+        <p>🚫 <strong>Volume without velocity is a trap.</strong> A startup with 50 features shipped slowly is far less valuable than one with 5 features shipped fast and iterated relentlessly based on real user feedback.</p>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- KEY TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Part 1 Key Takeaways</h3>
+      <ul>
+        <li>Vanity metrics — downloads, followers, press mentions — tell you almost nothing about a startup's health.</li>
+        <li>Retention is the most honest signal. If users leave after Day 7 or Day 30, the business is leaking, not growing.</li>
+        <li>10 paying, loyal customers outperform 1,000 passive sign-ups every time. Track revenue per user.</li>
+        <li>Measure a founder's velocity — how fast they move from idea to test to result — not just what they've built.</li>
+        <li>The right metrics reveal whether a founder is building a real business or managing perceptions.</li>
+      </ul>
+    </div>
+
+    <!-- SERIES NAVIGATION -->
+    <div class="part-nav">
+      <a href="angel-investing-bangladesh.html" class="part-nav-card">
+        <span class="nav-direction">← Previous</span>
+        <span class="nav-title">Angel Investing in Bangladesh: The Full Playbook</span>
+      </a>
+      <a href="traction-based-angel-investing-part-2.html" class="part-nav-card next">
+        <span class="nav-direction">Next in Series →</span>
+        <span class="nav-title">Traction-Based Angel Investing — Part 2</span>
+      </a>
+    </div>
+
+    <!-- SHARE BAR -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Traction-Based Angel Investing in Bangladesh — great read from Capallo: https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Traction-Based Angel Investing in Bangladesh — 3 signals most investors ignore&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <!-- COFFEE CTA -->
+    <div class="coffee-cta">
+      <p>If this article helped you think more clearly about what to look for in a startup before investing, consider supporting our work. It keeps the insights coming — free, for every investor.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Series nav -->
+    <div class="series-card">
+      <h4>📈 This Series</h4>
+      <ul class="series-list">
+        <li>
+          <a href="angel-investing-bangladesh.html">
+            <span class="part-dot">0</span>
+            The Full Angel Investing Playbook
+          </a>
+        </li>
+        <li>
+          <a href="traction-based-angel-investing-part-1.html" class="current">
+            <span class="part-dot">1</span>
+            Traction Investing — Part 1 (You are here)
+          </a>
+        </li>
+        <li>
+          <a href="traction-based-angel-investing-part-2.html">
+            <span class="part-dot">2</span>
+            Traction Investing — Part 2 (Coming soon)
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- TOC -->
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#signal-1">Signal #1 — Retention vs Acquisition</a></li>
+        <li><a href="#signal-2">Signal #2 — Quality vs Quantity</a></li>
+        <li><a href="#signal-3">Signal #3 — Velocity vs Volume</a></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo gives you access to vetted deals, investor protection, and ongoing portfolio support.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <!-- Risk note -->
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
