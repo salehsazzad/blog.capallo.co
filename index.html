@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capallo Blog — Venture Investing Insights</title>
+  <meta name="description" content="Expert insights on venture investing, startup ecosystems, and private markets in Bangladesh and beyond. By the Capallo team.">
+  <meta name="keywords" content="venture investing Bangladesh, startup investing, angel investing, private markets, Capallo blog">
+  <meta property="og:title" content="Capallo Blog — Venture Investing Insights">
+  <meta property="og:description" content="Expert insights on venture investing, startup ecosystems, and private markets.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter, system-ui, sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0f3460;
+      --dark-navy: #16213e;
+      --near-black: #1a1a2e;
+      --gold: #fbbf24;
+      --green: #10b981;
+      --body: #4a5568;
+      --light-bg: #f7fafc;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--near-black);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .nav-container {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 3rem;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; width: auto; }
+    .nav-blog-label {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold);
+      border-left: 2px solid var(--border); padding-left: 0.75rem; margin-left: 0.25rem;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      color: var(--body); text-decoration: none;
+      font-weight: 500; font-size: 0.9rem; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .btn {
+      padding: 0.65rem 1.5rem; border-radius: 6px;
+      font-weight: 600; font-size: 0.85rem;
+      text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary { background: var(--navy); color: white; }
+    .btn-primary:hover { background: var(--dark-navy); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,52,96,0.3); }
+    .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; }
+
+    /* ── HERO ── */
+    .blog-hero {
+      padding: 130px 3rem 70px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      color: white;
+    }
+    .blog-hero-inner { max-width: 1400px; margin: 0 auto; }
+    .hero-label {
+      display: inline-block; padding: 0.4rem 1rem;
+      background: rgba(255,255,255,0.12); border-radius: 50px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .blog-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.2rem; font-weight: 800; line-height: 1.2;
+      margin-bottom: 1.2rem; max-width: 700px;
+    }
+    .blog-hero p {
+      font-size: 1.1rem; color: rgba(255,255,255,0.85);
+      max-width: 580px; line-height: 1.75; margin-bottom: 2.5rem;
+    }
+    .hero-meta { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .hero-meta-item { text-align: center; }
+    .hero-meta-number { font-size: 2rem; font-weight: 700; color: var(--gold); }
+    .hero-meta-label { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
+
+
+
+    /* ── MAIN CONTENT ── */
+    .blog-main { max-width: 1400px; margin: 0 auto; padding: 4rem 3rem; }
+
+    /* ── FEATURED POST ── */
+    .featured-post {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      margin-bottom: 4rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none; color: inherit;
+    }
+    .featured-post:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+    .featured-img {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      min-height: 380px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .featured-img-overlay {
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.08)"/></svg>') repeat;
+    }
+    .featured-img-icon { font-size: 5rem; position: relative; z-index: 1; }
+    .featured-content { padding: 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+
+    .featured-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.3rem 0.8rem; background: var(--gold); color: var(--near-black);
+      border-radius: 20px; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; width: fit-content;
+    }
+    .featured-content h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.9rem; font-weight: 700; line-height: 1.3;
+      color: var(--near-black); margin-bottom: 1rem;
+    }
+    .featured-content p { color: var(--body); line-height: 1.75; margin-bottom: 1.5rem; font-size: 0.97rem; }
+    .post-meta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .post-meta-item { font-size: 0.82rem; color: #9ca3af; }
+    .post-meta-sep { color: #d1d5db; }
+    .read-more {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--navy); font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; transition: gap 0.2s;
+    }
+    .read-more:hover { gap: 0.8rem; }
+    .read-more svg { transition: transform 0.2s; }
+    .read-more:hover svg { transform: translateX(4px); }
+
+    /* ── ARTICLES GRID ── */
+    .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+    .section-title-sm {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .articles-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; margin-bottom: 4rem;
+    }
+    .article-card {
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; transition: all 0.3s;
+      text-decoration: none; color: inherit; display: flex; flex-direction: column;
+      background: white;
+    }
+    .article-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); border-color: var(--navy); }
+    .card-img {
+      height: 180px; display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; position: relative; overflow: hidden;
+    }
+    .card-img-pattern {
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="20" cy="20" r="0.8" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    }
+    .card-img span { position: relative; z-index: 1; }
+    .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .card-body h3 {
+      font-size: 1.1rem; font-weight: 700; line-height: 1.4;
+      color: var(--near-black); margin: 0.75rem 0 0.75rem;
+    }
+    .card-body p { color: var(--body); font-size: 0.88rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .card-date { font-size: 0.78rem; color: #9ca3af; }
+    .card-read { font-size: 0.8rem; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 0.3rem; }
+
+    /* ── NEWSLETTER CTA ── */
+    .newsletter-bar {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: 16px; padding: 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap;
+    }
+    .newsletter-text h3 { color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .newsletter-text p { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+    .newsletter-form { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .newsletter-form input {
+      padding: 0.8rem 1.2rem; border-radius: 6px; border: none;
+      font-size: 0.9rem; min-width: 260px; font-family: 'Inter', sans-serif;
+      outline: none;
+    }
+
+    /* ── COFFEE CTA ── */
+    .coffee-cta {
+      background: var(--light-bg); border-radius: 12px;
+      padding: 2rem; text-align: center; margin-bottom: 4rem;
+      border: 1px solid var(--border);
+    }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1rem; }
+    .coffee-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #FFDD00; color: #000; padding: 0.75rem 1.8rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800;
+    }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--near-black); color: #9ca3af; padding: 60px 3rem 30px; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid #374151;
+    }
+    .footer-brand img { height: 35px; margin-bottom: 1rem; }
+    .footer-brand p { line-height: 1.7; font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 320px; }
+    .footer-col h4 { color: var(--gold); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul li a { color: #9ca3af; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    /* ── LOAD MORE ── */
+    .load-more-wrap { text-align: center; margin-bottom: 3rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 70px; left: 0; width: 100%;
+        background: white; padding: 2rem 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999;
+      }
+      .blog-hero { padding: 110px 1.5rem 50px; }
+      .blog-hero h1 { font-size: 2.2rem; }
+      .featured-post { grid-template-columns: 1fr; }
+      .featured-img { min-height: 200px; }
+      .blog-main { padding: 2.5rem 1.5rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .newsletter-bar { flex-direction: column; padding: 2rem; }
+      .newsletter-form input { min-width: 100%; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .filter-inner { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#all-articles">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn btn-secondary" target="_blank" style="display:none;" id="nav-cta">Schedule Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="hero-label">Venture Investing Insights</div>
+    <h1>Knowledge That Powers Smarter Investing</h1>
+    <p>Deep-dives into venture investing, startup ecosystems, deal structuring, and private markets — from the team building Bangladesh's institutional investment infrastructure.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-number">15+</div>
+        <div class="hero-meta-label">Articles Published</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-number">5</div>
+        <div class="hero-meta-label">Topic Categories</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-number">Free</div>
+        <div class="hero-meta-label">Always Open Access</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- MAIN -->
+<main class="blog-main" id="all-articles">
+
+  <!-- FEATURED POST -->
+  <a href="posts/what-is-venture-investing.html" class="featured-post">
+    <div class="featured-img" style="background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);">
+      <div class="featured-img-overlay"></div>
+      <span class="featured-img-icon">🏦</span>
+    </div>
+    <div class="featured-content">
+      <div class="featured-badge">⭐ Featured Article</div>
+      <h2>What Is Venture Investing — And Why Should You Care?</h2>
+      <p>Most people keep their savings in bank accounts earning 2–4% annually. But a small, growing group of investors in Bangladesh are doing something different — putting capital directly into early-stage companies, targeting 15–25% returns. Here's everything you need to know about venture investing.</p>
+      <div class="post-meta">
+        <span class="post-meta-item">By Capallo Team</span>
+        <span class="post-meta-sep">·</span>
+        <span class="post-meta-item">8 min read</span>
+        <span class="post-meta-sep">·</span>
+        <span class="post-meta-item">March 2026</span>
+      </div>
+      <span class="read-more">
+        Read Full Article
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
+    </div>
+  </a>
+
+  <!-- ARTICLES GRID -->
+  <div class="section-header">
+    <div class="section-title-sm">Latest Articles</div>
+    <div id="post-count" style="font-size:0.82rem; color:#9ca3af;"></div>
+  </div>
+
+  <div class="articles-grid" id="articles-grid">
+
+    <!-- Article 1 -->
+    <a href="posts/investor-protection-framework.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #0f3460, #1e4d8c);">
+        <div class="card-img-pattern"></div>
+        <span>🛡️</span>
+      </div>
+      <div class="card-body">
+        <h3>How Capallo's Investor Protection Framework Works</h3>
+        <p>Understanding what's covered, what isn't, and why fraud protection changes the risk calculus for Bangladesh investors.</p>
+        <div class="card-footer">
+          <span class="card-date">March 2026</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 2 -->
+    <a href="posts/wakalah-quasi-equity-explained.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #1a1a2e, #0f3460);">
+        <div class="card-img-pattern"></div>
+        <span>⚖️</span>
+      </div>
+      <div class="card-body">
+        <h3>Wakalah, Quasi-Equity & Shariah-Compliant Financing Explained</h3>
+        <p>A plain-English breakdown of the innovative financing structures Capallo uses to align investors and founders.</p>
+        <div class="card-footer">
+          <span class="card-date">February 2026</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 3 -->
+    <a href="posts/bangladesh-private-markets.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #065f46, #10b981);">
+        <div class="card-img-pattern"></div>
+        <span>🇧🇩</span>
+      </div>
+      <div class="card-body">
+        <h3>The State of Private Markets in Bangladesh: A 2026 Overview</h3>
+        <p>Why Bangladesh's 180 million people represent one of Asia's most underserved investment opportunities — and what's changing.</p>
+        <div class="card-footer">
+          <span class="card-date">February 2026</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 4 -->
+    <a href="posts/how-to-evaluate-a-startup.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #92400e, #fbbf24);">
+        <div class="card-img-pattern"></div>
+        <span>🔍</span>
+      </div>
+      <div class="card-body">
+        <h3>How to Evaluate a Startup Before You Invest: A Framework</h3>
+        <p>The 8-point due diligence checklist Capallo uses to vet every founder — and how you can apply it yourself.</p>
+        <div class="card-footer">
+          <span class="card-date">January 2026</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 5 -->
+    <a href="posts/cash-flow-positive-startups.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #1e3a5f, #0f3460);">
+        <div class="card-img-pattern"></div>
+        <span>💰</span>
+      </div>
+      <div class="card-body">
+        <h3>Why Cash-Flow Positive Startups Win in Frontier Markets</h3>
+        <p>The case against burn-rate culture and why capital efficiency is the ultimate competitive moat in Bangladesh.</p>
+        <div class="card-footer">
+          <span class="card-date">January 2026</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 6 -->
+    <a href="posts/angel-investing-minimum.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #16213e, #0f3460);">
+        <div class="card-img-pattern"></div>
+        <span>📊</span>
+      </div>
+      <div class="card-body">
+        <h3>Starting with $5,000: Is Venture Investing Right for You?</h3>
+        <p>A candid guide to who should and shouldn't invest in private markets — with honest risk disclosures included.</p>
+        <div class="card-footer">
+          <span class="card-date">December 2025</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 7 -->
+    <a href="posts/exit-strategies-explained.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #1a1a2e, #374151);">
+        <div class="card-img-pattern"></div>
+        <span>🚪</span>
+      </div>
+      <div class="card-body">
+        <h3>Exit Strategies in Venture: What Investors Need to Know</h3>
+        <p>From secondary sales to strategic acquisitions — a comprehensive look at how investors eventually realize returns.</p>
+        <div class="card-footer">
+          <span class="card-date">December 2025</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 8 -->
+    <a href="posts/portfolio-diversification.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #92400e, #b45309);">
+        <div class="card-img-pattern"></div>
+        <span>🎯</span>
+      </div>
+      <div class="card-body">
+        <h3>Portfolio Diversification: Why One Deal Is Never Enough</h3>
+        <p>The math behind spreading venture bets, building a portfolio mindset, and managing illiquidity risk across investments.</p>
+        <div class="card-footer">
+          <span class="card-date">November 2025</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 9 -->
+    <a href="posts/dhaka-startup-ecosystem.html" class="article-card">
+      <div class="card-img" style="background: linear-gradient(135deg, #065f46, #047857);">
+        <div class="card-img-pattern"></div>
+        <span>🏙️</span>
+      </div>
+      <div class="card-body">
+        <h3>Inside Dhaka's Startup Ecosystem: Opportunities & Gaps</h3>
+        <p>A ground-level look at what's working, what's missing, and where the most attractive investment sectors lie in 2026.</p>
+        <div class="card-footer">
+          <span class="card-date">November 2025</span>
+          <span class="card-read">Read More →</span>
+        </div>
+      </div>
+    </a>
+
+  </div><!-- /articles-grid -->
+
+  <!-- LOAD MORE -->
+  <div class="load-more-wrap">
+    <button class="btn btn-secondary" onclick="loadMore()" id="load-more-btn" style="padding: 0.9rem 2.5rem;">Load More Articles</button>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-bar">
+    <div class="newsletter-text">
+      <h3>Get Venture Insights in Your Inbox</h3>
+      <p>Weekly case studies, deal frameworks, and market analysis — free, every week.</p>
+    </div>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com" id="email-input">
+      <a href="https://capallo.co/#investors" class="btn btn-primary" style="padding: 0.8rem 1.5rem; white-space: nowrap;">Subscribe Free →</a>
+    </div>
+  </div>
+
+  <!-- COFFEE CTA -->
+  <div class="coffee-cta">
+    <p>If these articles have helped you think clearer about venture investing, consider supporting our work ☕</p>
+    <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">
+      ☕ Buy Us a Coffee
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+        <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+        <div style="display:flex;gap:0.75rem;">
+          <a href="https://www.linkedin.com/company/capallo/" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#0077b5'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="http://wa.me/+8801645823853" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#25d366'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="posts/what-is-venture-investing.html">What Is Venture Investing</a></li>
+          <li><a href="posts/investor-protection-framework.html">Investor Protection</a></li>
+          <li><a href="posts/bangladesh-private-markets.html">Bangladesh Markets</a></li>
+          <li><a href="posts/how-to-evaluate-a-startup.html">Evaluating Startups</a></li>
+          <li><a href="posts/exit-strategies-explained.html">Exit Strategies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Capallo</h4>
+        <ul>
+          <li><a href="https://capallo.co/#investors">For Investors</a></li>
+          <li><a href="https://capallo.co/#founders">For Founders</a></li>
+          <li><a href="https://capallo.co/#about">About Us</a></li>
+          <li><a href="https://capallo.co/#contact">Contact</a></li>
+          <li><a href="https://capallo.co/#risk-disclaimer">Risk Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank">Schedule a Call</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#3c4f5d505954124f5d46465d587c5f5d4c5d505053125f53">Email Us</a></li>
+          <li><a href="http://wa.me/+8801645823853" target="_blank">WhatsApp</a></li>
+          <li><a href="https://supportkori.com/capallo" target="_blank">☕ Buy Us a Coffee</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // NAV scroll shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+
+  // Article count
+  function updateCount() {
+    const count = document.querySelectorAll('.article-card').length;
+    document.getElementById('post-count').textContent = count + ' articles';
+  }
+  updateCount();
+
+  // LOAD MORE
+  let loadedExtra = false;
+  function loadMore() {
+    loadedExtra = true;
+    document.getElementById('load-more-btn').textContent = 'All articles loaded';
+    document.getElementById('load-more-btn').disabled = true;
+  }
+</script>
+
+</body>
+</html>
