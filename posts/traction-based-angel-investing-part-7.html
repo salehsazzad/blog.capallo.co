@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investing Without an Exit Plan Is Like a Car With No Steering Wheel — Capallo Blog</title>
+  <meta name="description" content="Angel investors with exit clarity are 3x more likely to generate outsized returns. The 3 critical factors most investors ignore — dilution, alignment, and market timing.">
+  <meta name="keywords" content="startup exit plan Bangladesh, angel investing exit strategy, dilution pro-rata rights, investor alignment founder, venture exit Bangladesh">
+  <meta property="og:title" content="Investing Without an Exit Plan Is Like a Car With No Steering Wheel — Capallo Blog">
+  <meta property="og:description" content="The 3 critical exit factors most investors ignore — and why they determine whether you ever see a return.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-7.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-7.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0f3460; --dark-navy: #16213e; --near-black: #1a1a2e;
+      --gold: #fbbf24; --green: #10b981; --red: #ef4444;
+      --body: #4a5568; --light-bg: #f7fafc; --border: #e5e7eb; --white: #ffffff;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-secondary { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; background: white; color: var(--navy); border: 2px solid var(--navy); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); color: white; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .topic-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* Stat callout */
+    .stat-hero { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .stat-hero .stat-big { font-family: 'Playfair Display', Georgia, serif; font-size: 4rem; font-weight: 800; color: var(--gold); line-height: 1; flex-shrink: 0; }
+    .stat-hero .stat-text h3 { font-size: 1.15rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+    .stat-hero .stat-text p { color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.65; margin: 0; }
+
+    /* Pull quote */
+    .pull-quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem; border-left: 5px solid var(--gold); margin: 2.5rem 0; background: rgba(15,52,96,0.03); border-radius: 0 12px 12px 0; }
+
+    /* Factor block */
+    .factor-block { margin: 2.5rem 0; }
+    .factor-label { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(15,52,96,0.06); border: 1px solid rgba(15,52,96,0.12); border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; }
+    .factor-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 700; color: var(--near-black); margin-bottom: 1.25rem; line-height: 1.3; }
+
+    /* Dilution visual */
+    .dilution-visual { margin: 1.75rem 0; }
+    .dilution-row { display: grid; grid-template-columns: 120px 1fr auto; gap: 1rem; align-items: center; margin-bottom: 0.75rem; }
+    .dilution-row .d-label { font-size: 0.82rem; font-weight: 700; color: var(--body); }
+    .dilution-row .d-bar-wrap { background: var(--border); border-radius: 6px; height: 36px; overflow: hidden; }
+    .dilution-row .d-bar { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 0.75rem; }
+    .dilution-row .d-bar span { font-size: 0.82rem; font-weight: 700; color: white; }
+    .dilution-row .d-val { font-size: 0.88rem; font-weight: 700; color: var(--near-black); white-space: nowrap; text-align: right; min-width: 80px; }
+
+    /* Example calc box */
+    .calc-box { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin: 1.5rem 0; }
+    .calc-box .calc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .calc-steps { display: flex; flex-direction: column; gap: 0.75rem; }
+    .calc-step { display: flex; align-items: flex-start; gap: 1rem; padding: 0.85rem 1rem; border-radius: 8px; background: white; border: 1px solid var(--border); }
+    .calc-step .cs-num { width: 28px; height: 28px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700; flex-shrink: 0; }
+    .calc-step .cs-text { font-size: 0.9rem; color: var(--body); line-height: 1.6; }
+    .calc-step .cs-text strong { color: var(--near-black); }
+
+    /* Pro-rata highlight */
+    .prorata-box { background: linear-gradient(135deg, rgba(16,185,129,0.06) 0%, rgba(16,185,129,0.03) 100%); border: 2px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1.75rem; margin: 1.5rem 0; }
+    .prorata-box .pr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #065f46; margin-bottom: 0.75rem; }
+    .prorata-box h4 { font-size: 1rem; font-weight: 700; color: #065f46; margin-bottom: 0.75rem; }
+    .prorata-box p { font-size: 0.93rem; color: var(--body); line-height: 1.75; margin-bottom: 0.5rem; }
+    .prorata-box p:last-child { margin-bottom: 0; }
+    .prorata-outcome { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+    .prorata-outcome .po-card { border-radius: 8px; padding: 1rem; text-align: center; }
+    .prorata-outcome .po-card.without { background: #fff5f5; border: 1px solid #fecaca; }
+    .prorata-outcome .po-card.with { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .prorata-outcome .po-card .po-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .prorata-outcome .po-card.without .po-label { color: #dc2626; }
+    .prorata-outcome .po-card.with .po-label { color: #16a34a; }
+    .prorata-outcome .po-card .po-val { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .prorata-outcome .po-card.without .po-val { color: #dc2626; }
+    .prorata-outcome .po-card.with .po-val { color: #16a34a; }
+    .prorata-outcome .po-card .po-desc { font-size: 0.78rem; color: var(--body); }
+
+    /* Warning box */
+    .warning-box { background: #fff8f0; border-left: 5px solid var(--gold); border-radius: 0 10px 10px 0; padding: 1.5rem; margin: 1.75rem 0; }
+    .warning-box p { font-size: 0.95rem; color: #78350f; line-height: 1.75; margin: 0; }
+
+    /* Alignment box */
+    .alignment-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.75rem 0; }
+    .alignment-card { border-radius: 12px; padding: 1.5rem; }
+    .alignment-card.founder { background: rgba(139,92,246,0.06); border: 2px solid rgba(139,92,246,0.18); }
+    .alignment-card.investor { background: rgba(15,52,96,0.05); border: 2px solid rgba(15,52,96,0.15); }
+    .alignment-card .ac-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .alignment-card.founder .ac-label { color: #7c3aed; }
+    .alignment-card.investor .ac-label { color: var(--navy); }
+    .alignment-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .alignment-card.founder h4 { color: #6d28d9; }
+    .alignment-card.investor h4 { color: var(--navy); }
+    .alignment-card p { font-size: 0.88rem; color: var(--body); line-height: 1.65; margin: 0; }
+
+    /* Protective terms checklist */
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin: 1.25rem 0; }
+    .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.93rem; color: var(--body); line-height: 1.6; padding: 0.75rem 1rem; background: var(--light-bg); border-radius: 8px; border: 1px solid var(--border); }
+    .checklist li::before { content: "✓"; color: var(--green); font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+
+    /* Market timing */
+    .timing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.75rem 0; }
+    .timing-card { border-radius: 12px; padding: 1.4rem; text-align: center; border: 1px solid var(--border); background: var(--light-bg); transition: all 0.2s; }
+    .timing-card:hover { border-color: var(--navy); background: white; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+    .timing-card .tc-icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
+    .timing-card .tc-name { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; }
+    .timing-card .tc-desc { font-size: 0.8rem; color: var(--body); line-height: 1.5; }
+
+    /* Danger box */
+    .danger-box { background: #fff5f5; border-left: 5px solid var(--red); border-radius: 0 10px 10px 0; padding: 1.5rem; margin: 1.75rem 0; }
+    .danger-box p { font-size: 0.95rem; color: #991b1b; line-height: 1.75; margin: 0; }
+
+    /* Takeaway */
+    .takeaway-box { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--navy); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .dilution-row { grid-template-columns: 80px 1fr auto; }
+      .alignment-split { grid-template-columns: 1fr; }
+      .timing-grid { grid-template-columns: 1fr; }
+      .prorata-outcome { grid-template-columns: 1fr 1fr; }
+      .stat-hero { flex-direction: column; gap: 1rem; }
+      .stat-hero .stat-big { font-size: 3rem; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Investing Without an Exit Plan</span>
+    </div>
+    <div class="topic-badge">🚪 Exit Strategy</div>
+    <h1>Investing in a Startup Without an Exit Plan Is Like Buying a Car With No Steering Wheel</h1>
+    <p class="subtitle">The 3 critical factors most investors ignore — and why they determine whether you ever actually see a return on your investment.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        8 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Exit Strategy</span>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">
+      Backing a hot startup with a famous founder doesn't mean you've already won. Your initial investment is just the opening act. The real show is the exit — where you either multiply your money or watch it vanish.
+    </p>
+
+    <div class="stat-hero">
+      <div class="stat-big">3×</div>
+      <div class="stat-text">
+        <h3>More likely to generate outsized returns</h3>
+        <p>Angel investors who have full clarity on their exit strategy before writing a check are 3× more likely to generate outsized returns than those who only focus on the entry. Most investors spend 95% of their diligence on entry. The exit is an afterthought — and that's exactly where they lose.</p>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      Most investors focus entirely on the entry. But it's the three factors after the entry that determine whether you ever see a return.
+    </div>
+
+    <hr class="article-divider">
+
+    <h2 id="factors">The 3 Critical Exit Factors</h2>
+
+    <!-- FACTOR 1 -->
+    <div class="factor-block" id="factor-1">
+      <div class="factor-label">⚠️ Critical Factor #1</div>
+      <div class="factor-title">The Dilution Trap</div>
+
+      <p>Think your 10% stake is safe? Every future funding round can slice your piece of the pie thinner. But here's the nuance most investors miss: <strong>smaller slices can be worth more if the pie grows fast enough.</strong></p>
+
+      <div class="calc-box">
+        <div class="calc-label">📊 Dilution in Action — A Real Example</div>
+        <div class="calc-steps">
+          <div class="calc-step">
+            <div class="cs-num">1</div>
+            <div class="cs-text">You invest early and get <strong>10% at a $1M valuation</strong>. Your stake is worth <strong>$100K</strong>.</div>
+          </div>
+          <div class="calc-step">
+            <div class="cs-num">2</div>
+            <div class="cs-text">Company raises a new round at a <strong>$10M valuation</strong>. Your stake gets diluted to <strong>2%</strong>.</div>
+          </div>
+          <div class="calc-step">
+            <div class="cs-num">3</div>
+            <div class="cs-text">You own less of the company — but your 2% is now worth <strong>$200K</strong>. The pie grew faster than your slice shrank.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dilution-visual">
+        <div class="dilution-row">
+          <span class="d-label">Entry (10%)</span>
+          <div class="d-bar-wrap"><div class="d-bar" style="width:100%; background:var(--navy);"><span>10% stake</span></div></div>
+          <span class="d-val" style="color:var(--navy);">$100K</span>
+        </div>
+        <div class="dilution-row">
+          <span class="d-label">After raise (2%)</span>
+          <div class="d-bar-wrap"><div class="d-bar" style="width:20%; background:#1e5ba8;"><span>2%</span></div></div>
+          <span class="d-val" style="color:var(--green);">$200K ↑</span>
+        </div>
+      </div>
+
+      <p><strong>When does dilution become a real trap?</strong> When rounds are down rounds — valuation drops — or when founders over-raise without hitting milestones, creating pressure without progress.</p>
+
+      <div class="warning-box">
+        <p>⚡ <strong>Always model your future ownership across 2–3 rounds before you invest.</strong> Assume at least one more round before exit. Where does your stake land? Is that still worth backing?</p>
+      </div>
+
+      <div class="prorata-box">
+        <div class="pr-label">🛡️ The Protection: Pro-Rata Rights</div>
+        <h4>Negotiate the right — not the obligation — to invest in future rounds to maintain your ownership %</h4>
+        <p>Pro-rata rights let you buy more shares in future rounds to keep your stake from shrinking. For early investors, this is one of the most valuable terms you can negotiate.</p>
+        <div class="prorata-outcome">
+          <div class="po-card without">
+            <div class="po-label">Without Pro-Rata</div>
+            <div class="po-val">0.5%</div>
+            <div class="po-desc">Diluted down from 2% — worth $1M at exit</div>
+          </div>
+          <div class="po-card with">
+            <div class="po-label">With Pro-Rata</div>
+            <div class="po-val">2%</div>
+            <div class="po-desc">Maintained via follow-on — worth $4M at exit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- FACTOR 2 -->
+    <div class="factor-block" id="factor-2">
+      <div class="factor-label">🤝 Critical Factor #2</div>
+      <div class="factor-title">The Alignment Illusion</div>
+
+      <p>Founders and investors often want completely different things — and neither party talks about it until it's too late.</p>
+
+      <div class="alignment-split">
+        <div class="alignment-card founder">
+          <div class="ac-label">👨‍💼 What Founders Often Want</div>
+          <h4>Build a legacy empire</h4>
+          <p>Many founders are building for impact, legacy, or simply the joy of building. A $100M acquisition offer might feel like selling their life's work too early — especially if they believe it can be a $1B company.</p>
+        </div>
+        <div class="alignment-card investor">
+          <div class="ac-label">💼 What Investors Need</div>
+          <h4>A liquidity event</h4>
+          <p>Investors need to return capital to their own stakeholders. A $100M exit today may be far more valuable than waiting for a theoretical $1B exit that may never come — especially with interest rates, opportunity cost, and fund timelines in play.</p>
+        </div>
+      </div>
+
+      <div class="danger-box">
+        <p>🚨 <strong>This has played out across the world.</strong> Founders have rejected $100M+ acquisition offers because they "weren't ready to sell" — leaving investors trapped for years with no liquidity and no path to exit. Don't assume alignment. Verify it.</p>
+      </div>
+
+      <p><strong>Before you invest, get clarity on the exit timeline upfront.</strong> Ask directly: What does a win look like for you? In what timeframe? What acquisition offer would you accept? These aren't uncomfortable questions — they're essential ones.</p>
+
+      <ul class="checklist">
+        <li>Agree on a target exit window (e.g. 5–7 years) before signing the term sheet</li>
+        <li>Include drag-along rights so majority shareholders can compel a sale if warranted</li>
+        <li>Discuss M&A openness explicitly — does the founder have companies they'd be willing to sell to?</li>
+        <li>Establish governance triggers for when exit conversations must formally begin</li>
+      </ul>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- FACTOR 3 -->
+    <div class="factor-block" id="factor-3">
+      <div class="factor-label">⏱️ Critical Factor #3</div>
+      <div class="factor-title">The Market Timing Mirage</div>
+
+      <p>You can pick the <em>perfect</em> company with the perfect team and perfect metrics — and still lose if the exit market freezes at the wrong moment.</p>
+
+      <p>IPOs get postponed. Acquisitions dry up. Valuations crash based on macroeconomic winds <strong>entirely outside the startup's or founder's control.</strong> This is the risk no amount of due diligence can fully eliminate.</p>
+
+      <div class="danger-box">
+        <p>🚨 <strong>The best investors don't just plan for the big exit. They build alternative liquidity paths for when the market doesn't cooperate.</strong></p>
+      </div>
+
+      <p>Always have a second plan — and ideally a third:</p>
+
+      <div class="timing-grid">
+        <div class="timing-card">
+          <div class="tc-icon">🔄</div>
+          <div class="tc-name">Secondary Sales</div>
+          <div class="tc-desc">Sell your stake to another investor before the company exits. Increasingly common in mature startup ecosystems.</div>
+        </div>
+        <div class="timing-card">
+          <div class="tc-icon">💰</div>
+          <div class="tc-name">Dividend Structures</div>
+          <div class="tc-desc">Negotiate dividend rights so profitable companies return cash to investors even without a formal exit event.</div>
+        </div>
+        <div class="timing-card">
+          <div class="tc-icon">🏦</div>
+          <div class="tc-name">Partial Liquidity</div>
+          <div class="tc-desc">Take some cash off the table in later rounds when new investors buy in — without waiting for a full acquisition or IPO.</div>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <p>⚡ <strong>The investor who plans for market timing risk isn't being pessimistic — they're being professional.</strong> The best exits often come from having the patience to wait for the right window, backed by a liquidity plan that buys you that patience.</p>
+      </div>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Angel investors with exit clarity are 3× more likely to generate outsized returns. Plan the exit before you write the check.</li>
+        <li>Dilution isn't always bad — if the valuation grows faster than your stake shrinks, you still win. Model 2–3 rounds ahead.</li>
+        <li>Negotiate pro-rata rights. The difference between 0.5% and 2% at exit could mean $1M vs $4M in your pocket.</li>
+        <li>Founders and investors often have fundamentally different exit goals. Verify alignment upfront — don't assume it.</li>
+        <li>Include drag-along rights and discuss M&A openness explicitly before signing any term sheet.</li>
+        <li>Market timing is outside everyone's control. Always have secondary sale, dividend, and partial liquidity fallback plans.</li>
+        <li>Your initial investment is the opening act. The exit is the real show.</li>
+      </ul>
+    </div>
+
+    <!-- PART NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-6.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous Article</span>
+        <span class="nav-title">Why Inflation Is Stealing From Your Future Self</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Browse All Articles →</span>
+        <span class="nav-title">More venture investing insights</span>
+      </a>
+    </div>
+
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-7.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Investing without an exit plan is like a car with no steering wheel: https://blog.capallo.co/posts/traction-based-angel-investing-part-7.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Investing without an exit plan is like a car with no steering wheel — 3 critical factors most investors ignore&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-7.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <div class="coffee-cta">
+      <p>If this helped you think more clearly about exit planning before your next investment, consider supporting our work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#factors">3 Critical Exit Factors</a></li>
+        <li><a href="#factor-1">Factor #1 — The Dilution Trap</a></li>
+        <li><a href="#factor-2">Factor #2 — The Alignment Illusion</a></li>
+        <li><a href="#factor-3">Factor #3 — Market Timing Mirage</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo gives you access to vetted deals with clear exit frameworks and investor protection built in from day one.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('.factor-block[id], h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
