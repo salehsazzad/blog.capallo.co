@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If You're Not Investing, Inflation Is Stealing From Your Future Self — Capallo Blog</title>
+  <meta name="description" content="Inflation is silently eating your cash every day. Here are 5 reasons why investing isn't optional — it's the only way to fight back.">
+  <meta name="keywords" content="inflation Bangladesh investing, why invest Bangladesh, compound interest, asset classes Bangladesh, ROI investing, venture investing Bangladesh">
+  <meta property="og:title" content="If You're Not Investing, Inflation Is Stealing From Your Future Self — Capallo Blog">
+  <meta property="og:description" content="5 reasons why investing isn't optional — inflation is stealing from your future self every day you wait.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-6.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-6.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0f3460; --dark-navy: #16213e; --near-black: #1a1a2e;
+      --gold: #fbbf24; --green: #10b981; --red: #ef4444;
+      --body: #4a5568; --light-bg: #f7fafc; --border: #e5e7eb; --white: #ffffff;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-secondary { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; background: white; color: var(--navy); border: 2px solid var(--navy); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); color: white; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .topic-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* History box */
+    .history-box { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .history-box .history-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .history-box p { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.8; margin-bottom: 0.75rem; }
+    .history-box p:last-child { margin-bottom: 0; }
+    .rice-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+    .rice-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1rem 1.25rem; text-align: center; }
+    .rice-card .rice-year { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+    .rice-card .rice-price { font-size: 1.4rem; font-weight: 800; color: white; margin-bottom: 0.25rem; }
+    .rice-card .rice-unit { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+    /* Reason block */
+    .reason-block { margin: 2.5rem 0; }
+    .reason-label { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(15,52,96,0.06); border: 1px solid rgba(15,52,96,0.12); border-radius: 20px; padding: 0.35rem 1rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; }
+    .reason-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 700; color: var(--near-black); margin-bottom: 1.25rem; line-height: 1.3; }
+
+    /* Ice → snowball visual */
+    .ice-snowball { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1.75rem 0; flex-wrap: wrap; }
+    .ice-step { text-align: center; }
+    .ice-step .step-icon { font-size: 2.5rem; margin-bottom: 0.4rem; }
+    .ice-step .step-label { font-size: 0.8rem; font-weight: 600; color: var(--body); }
+    .ice-step .step-sub { font-size: 0.72rem; color: #9ca3af; margin-top: 0.15rem; }
+    .ice-arrow { font-size: 1.5rem; color: #cbd5e0; margin-bottom: 1rem; }
+
+    /* Compound interest visualizer */
+    .compound-box { background: var(--light-bg); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; margin: 1.75rem 0; }
+    .compound-box .compound-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .compound-steps { display: flex; flex-direction: column; gap: 0.6rem; }
+    .compound-row { display: flex; align-items: center; gap: 1rem; }
+    .compound-row .c-year { font-size: 0.8rem; font-weight: 700; color: #9ca3af; min-width: 48px; }
+    .compound-row .c-bar-wrap { flex: 1; background: var(--border); border-radius: 4px; height: 28px; overflow: hidden; }
+    .compound-row .c-bar { height: 100%; background: linear-gradient(90deg, var(--navy), #1e5ba8); border-radius: 4px; display: flex; align-items: center; padding-left: 0.75rem; transition: width 0.3s; }
+    .compound-row .c-val { font-size: 0.82rem; font-weight: 700; color: white; white-space: nowrap; }
+    .compound-note { font-size: 0.82rem; color: #9ca3af; margin-top: 1rem; font-style: italic; }
+
+    /* Einstein quote */
+    .einstein-quote { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; text-align: center; }
+    .einstein-quote blockquote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 700; color: white; line-height: 1.4; margin-bottom: 0.75rem; }
+    .einstein-quote cite { font-size: 0.85rem; color: var(--gold); font-style: normal; font-weight: 600; }
+
+    /* Asset class grid */
+    .asset-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.75rem 0; }
+    .asset-card { border-radius: 12px; padding: 1.5rem; border: 2px solid var(--border); transition: all 0.2s; }
+    .asset-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+    .asset-card .asset-icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
+    .asset-card .asset-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .asset-card .asset-desc { font-size: 0.85rem; color: var(--body); line-height: 1.55; }
+    .asset-card.cash { background: #fff5f5; border-color: #fecaca; }
+    .asset-card.cash .asset-name { color: #dc2626; }
+    .asset-card.realestate { background: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.3); }
+    .asset-card.realestate .asset-name { color: #92650a; }
+    .asset-card.stocks { background: rgba(59,130,246,0.05); border-color: rgba(59,130,246,0.2); }
+    .asset-card.stocks .asset-name { color: #1d4ed8; }
+    .asset-card.startups { background: rgba(15,52,96,0.05); border-color: rgba(15,52,96,0.18); }
+    .asset-card.startups .asset-name { color: var(--navy); }
+
+    /* Rule of 72 */
+    .rule72-box { background: var(--near-black); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .rule72-box .rule-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .rule72-formula { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.25rem; text-align: center; font-family: 'Courier New', monospace; margin-bottom: 1.5rem; }
+    .rule72-formula .formula-text { font-size: 1.4rem; font-weight: 700; color: white; }
+    .rule72-formula .formula-example { font-size: 0.88rem; color: var(--gold); margin-top: 0.5rem; }
+    .roi-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .roi-metric { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.1rem; text-align: center; }
+    .roi-metric .roi-name { font-size: 0.82rem; font-weight: 700; color: var(--gold); margin-bottom: 0.4rem; }
+    .roi-metric .roi-full { font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
+
+    /* Final CTA question */
+    .question-box { background: rgba(251,191,36,0.06); border: 2px solid rgba(251,191,36,0.25); border-radius: 14px; padding: 2rem 2.5rem; margin: 2.5rem 0; }
+    .question-box .q-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #92650a; margin-bottom: 1rem; }
+    .question-box p { font-size: 1.05rem; color: var(--near-black); line-height: 1.8; font-weight: 500; margin: 0; }
+
+    /* Takeaway */
+    .takeaway-box { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* Part nav */
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--navy); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .rice-compare { grid-template-columns: 1fr 1fr; }
+      .asset-grid { grid-template-columns: 1fr 1fr; }
+      .roi-metrics { grid-template-columns: 1fr; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>If You're Not Investing, Inflation Is Stealing From You</span>
+    </div>
+    <div class="topic-badge">💸 Investor Mindset</div>
+    <h1>If You're Not Investing, You're Paying Inflation to Steal From Your Future Self</h1>
+    <p class="subtitle">5 reasons why investing isn't optional — and how understanding them could be the most important financial decision you ever make.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        7 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Investor Mindset</span>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">
+      Every day you leave money sitting in a savings account earning 3% while inflation runs at 8%, you are not being safe. You are slowly paying a tax to your future self. Here's why — and what to do about it.
+    </p>
+
+    <div class="history-box">
+      <div class="history-label">🌾 Bengal Rice Prices — A 100-Year Inflation Story</div>
+      <p>In 1925, rice in the Bengal region cost roughly <strong>4–5 paise per kg</strong>. Today, the same rice costs <strong>BDT 50–75 per kg</strong> depending on variety and city. That's not a coincidence. That's inflation — silent, relentless, compounding every single year.</p>
+      <div class="rice-compare">
+        <div class="rice-card">
+          <div class="rice-year">1925</div>
+          <div class="rice-price">~0.05 ₹</div>
+          <div class="rice-unit">per kg (Bengal)</div>
+        </div>
+        <div class="rice-card">
+          <div class="rice-year">Today</div>
+          <div class="rice-price">BDT 50–75</div>
+          <div class="rice-unit">per kg (Bangladesh)</div>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem;">But here's what's wild: if you'd invested just $1 in a profit-generating asset in 1925, that money could have grown <strong>10,000× by today.</strong> Inflation is the enemy. Smart investing is the weapon.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <h2 id="reasons">5 Reasons You Cannot Afford to Not Invest</h2>
+
+    <!-- REASON 1 -->
+    <div class="reason-block" id="reason-1">
+      <div class="reason-label">🧊 Reason #1</div>
+      <div class="reason-title">Your Cash Is a Melting Ice Cube</div>
+
+      <p>Inflation means your BDT 100 today buys less tomorrow. Leave it in cash, and it slowly shrinks — not in number, but in purchasing power. Every year. Every month. Every day.</p>
+
+      <div class="ice-snowball">
+        <div class="ice-step">
+          <div class="step-icon">🧊</div>
+          <div class="step-label">Cash sitting idle</div>
+          <div class="step-sub">Shrinks every year</div>
+        </div>
+        <div class="ice-arrow">→</div>
+        <div class="ice-step">
+          <div class="step-icon">💧</div>
+          <div class="step-label">After 10 years</div>
+          <div class="step-sub">Worth ~60% of today</div>
+        </div>
+        <div class="ice-arrow">→</div>
+        <div class="ice-step">
+          <div class="step-icon">❄️</div>
+          <div class="step-label">After 20 years</div>
+          <div class="step-sub">Worth ~35% of today</div>
+        </div>
+      </div>
+
+      <p>But invest the same money? That ice cube becomes a snowball — rolling downhill, growing over time instead of shrinking. There are many asset classes that outpace inflation. Your money can actually work instead of hiding under a mattress.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- REASON 2 -->
+    <div class="reason-block" id="reason-2">
+      <div class="reason-label">📈 Reason #2</div>
+      <div class="reason-title">Compound Interest Is Your Best Friend</div>
+
+      <div class="einstein-quote">
+        <blockquote>"Compound interest is the eighth wonder of the world."</blockquote>
+        <cite>— Albert Einstein</cite>
+      </div>
+
+      <p>Here's how it works in practice:</p>
+
+      <div class="compound-box">
+        <div class="compound-label">Starting with BDT 10,000 at 10% annual return</div>
+        <div class="compound-steps">
+          <div class="compound-row">
+            <span class="c-year">Year 1</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:10%;"><span class="c-val">11,000</span></div></div>
+          </div>
+          <div class="compound-row">
+            <span class="c-year">Year 3</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:18%;"><span class="c-val">13,310</span></div></div>
+          </div>
+          <div class="compound-row">
+            <span class="c-year">Year 5</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:28%;"><span class="c-val">16,105</span></div></div>
+          </div>
+          <div class="compound-row">
+            <span class="c-year">Year 10</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:50%;"><span class="c-val">25,937</span></div></div>
+          </div>
+          <div class="compound-row">
+            <span class="c-year">Year 20</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:80%;"><span class="c-val">67,275</span></div></div>
+          </div>
+          <div class="compound-row">
+            <span class="c-year">Year 30</span>
+            <div class="c-bar-wrap"><div class="c-bar" style="width:100%;"><span class="c-val">174,494</span></div></div>
+          </div>
+        </div>
+        <div class="compound-note">You earned on your earnings. That's the secret. Time + the right investment opportunity = the snowball effect.</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- REASON 3 -->
+    <div class="reason-block" id="reason-3">
+      <div class="reason-label">⏰ Reason #3</div>
+      <div class="reason-title">The Early Bird Gets the Whole Forest</div>
+
+      <p>If you start investing at 25, you need to save <strong>significantly less</strong> than someone who starts at 40 to reach the same retirement goal. The math is brutal — and beautiful — depending on when you start.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0;">
+        <div style="background:#f0fdf4; border:2px solid #bbf7d0; border-radius:12px; padding:1.5rem; text-align:center;">
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#16a34a; margin-bottom:0.5rem;">Starting at 25</div>
+          <div style="font-size:2rem; font-weight:800; color:#14532d; margin-bottom:0.3rem;">35 years</div>
+          <div style="font-size:0.85rem; color:var(--body);">of compound growth working for you</div>
+        </div>
+        <div style="background:#fff5f5; border:2px solid #fecaca; border-radius:12px; padding:1.5rem; text-align:center;">
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#dc2626; margin-bottom:0.5rem;">Starting at 40</div>
+          <div style="font-size:2rem; font-weight:800; color:#7f1d1d; margin-bottom:0.3rem;">20 years</div>
+          <div style="font-size:0.85rem; color:var(--body);">and you'll need to save 3–4× more to catch up</div>
+        </div>
+      </div>
+
+      <p>Markets have ups and downs. But over decades, they trend up. <strong>Your future self will high-five you for starting now</strong> — and never forgive you for waiting.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- REASON 4 -->
+    <div class="reason-block" id="reason-4">
+      <div class="reason-label">🏦 Reason #4</div>
+      <div class="reason-title">Understand Asset Classes — or Miss the Upside</div>
+
+      <p>Not all assets are created equal. Where you put your money determines both your risk and your return. Miss this truth — miss the upside.</p>
+
+      <div class="asset-grid">
+        <div class="asset-card cash">
+          <div class="asset-icon">💵</div>
+          <div class="asset-name">Cash</div>
+          <div class="asset-desc">Loses value over time. Inflation is a silent tax on every taka sitting idle. Safe feeling, dangerous reality.</div>
+        </div>
+        <div class="asset-card realestate">
+          <div class="asset-icon">🏠</div>
+          <div class="asset-name">Real Estate</div>
+          <div class="asset-desc">Stable, moderate returns. Tangible asset that holds value well. Less liquid, but reliable over long horizons.</div>
+        </div>
+        <div class="asset-card stocks">
+          <div class="asset-icon">📊</div>
+          <div class="asset-name">Stocks</div>
+          <div class="asset-desc">Growth potential with cyclical ups and downs. Historically outperforms inflation over the long run.</div>
+        </div>
+        <div class="asset-card startups">
+          <div class="asset-icon">🚀</div>
+          <div class="asset-name">Startups</div>
+          <div class="asset-desc">Risky — but the highest return potential of any asset class. One winner can return 10×–100× your investment.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- REASON 5 -->
+    <div class="reason-block" id="reason-5">
+      <div class="reason-label">🧮 Reason #5</div>
+      <div class="reason-title">Understand ROI — or Just Chase Stories</div>
+
+      <p>Knowing <em>that</em> you should invest is only half the equation. The other half is knowing <strong>how to measure whether an investment is actually working.</strong></p>
+
+      <div class="rule72-box">
+        <div class="rule-label">📐 The Rule of 72 — The Simplest Tool in Investing</div>
+        <div class="rule72-formula">
+          <div class="formula-text">72 ÷ Interest Rate = Years to Double Your Money</div>
+          <div class="formula-example">At 12% return → your money doubles in 6 years · At 6% return → 12 years · At 24% return → 3 years</div>
+        </div>
+        <div class="roi-metrics">
+          <div class="roi-metric">
+            <div class="roi-name">IRR</div>
+            <div class="roi-full">Internal Rate of Return — the annualized return of an investment over its lifetime</div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-name">MoIC</div>
+            <div class="roi-full">Multiple on Invested Capital — how many times your original investment came back</div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-name">Payback Period</div>
+            <div class="roi-full">How long until you recover your original capital from returns generated</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Know the math. <strong>Don't just chase stories.</strong> Every investment should be evaluated against a clear return target — not just a compelling pitch.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- CLOSING QUESTION -->
+    <div class="question-box">
+      <div class="q-label">💭 The Question Worth Asking Every Time</div>
+      <p>Next time you deposit money into a random bank account, ask yourself: <strong>Am I letting inflation steal from my future self — or am I investing in an asset that fights back?</strong> That single question, asked consistently, is the difference between building wealth and watching it quietly disappear.</p>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Cash sitting idle loses purchasing power every year. Inflation is not neutral — it's a slow tax on inaction.</li>
+        <li>Compound interest rewards time above everything else. The earlier you start, the less you need to invest to reach the same goal.</li>
+        <li>Starting at 25 vs 40 can mean needing 3–4× less capital to retire with the same amount.</li>
+        <li>Different asset classes carry different risk/return profiles. Startups carry the most risk — and the highest potential return of any asset class.</li>
+        <li>Know your ROI metrics: Rule of 72, IRR, MoIC, and Payback Period. Don't invest based on stories alone.</li>
+        <li>The question isn't whether to invest. It's which asset class matches your risk tolerance, time horizon, and return target.</li>
+      </ul>
+    </div>
+
+    <!-- PART NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-5.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous Article</span>
+        <span class="nav-title">Startup vs SME — The Distinction That Changes Everything</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Browse All Articles →</span>
+        <span class="nav-title">More venture investing insights</span>
+      </a>
+    </div>
+
+    <!-- SHARE BAR -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-6.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=If you're not investing, inflation is stealing from your future self: https://blog.capallo.co/posts/traction-based-angel-investing-part-6.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=If you're not investing, you're paying inflation to steal from your future self&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-6.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <div class="coffee-cta">
+      <p>If this helped you think more clearly about why investing matters and how to evaluate returns, consider supporting our work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#reasons">5 Reasons You Must Invest</a></li>
+        <li><a href="#reason-1">Reason #1 — Melting Ice Cube</a></li>
+        <li><a href="#reason-2">Reason #2 — Compound Interest</a></li>
+        <li><a href="#reason-3">Reason #3 — Start Early</a></li>
+        <li><a href="#reason-4">Reason #4 — Asset Classes</a></li>
+        <li><a href="#reason-5">Reason #5 — Understand ROI</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Put your capital to work in vetted, high-potential startups with Capallo's investor protection built in.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('.reason-block[id], h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
