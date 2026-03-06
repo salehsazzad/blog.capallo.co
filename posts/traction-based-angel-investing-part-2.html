@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traction-Based Angel Investing in Bangladesh (Part 2) — Capallo Blog</title>
+  <meta name="description" content="Invest with healthy terms to make money. Be an investor, not a vulture. The four terms that make or break a venture deal in Bangladesh.">
+  <meta name="keywords" content="angel investing terms Bangladesh, liquidation preference, cap table, anti-dilution, venture investing Bangladesh, startup investment terms">
+  <meta property="og:title" content="Traction-Based Angel Investing in Bangladesh (Part 2) — Capallo Blog">
+  <meta property="og:description" content="Invest with healthy terms to make money. Be an investor, not a vulture. The four terms that make or break a venture deal.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-2.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-2.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter, system-ui, sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0f3460;
+      --dark-navy: #16213e;
+      --near-black: #1a1a2e;
+      --gold: #fbbf24;
+      --green: #10b981;
+      --red: #ef4444;
+      --body: #4a5568;
+      --light-bg: #f7fafc;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; width: auto; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; display: inline-block; }
+    .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    /* ── HERO ── */
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); color: white; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .series-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* ── LAYOUT ── */
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+
+    /* Lead */
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* History box */
+    .history-box { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .history-box .history-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .history-box p { color: rgba(255,255,255,0.88); font-size: 1rem; line-height: 1.8; margin-bottom: 0.75rem; }
+    .history-box p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem; border-left: 5px solid var(--gold); margin: 2.5rem 0; background: rgba(15,52,96,0.03); border-radius: 0 12px 12px 0; }
+
+    /* Cap table comparison */
+    .captable-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0; }
+    .captable-card { border-radius: 12px; padding: 1.75rem; }
+    .captable-card.healthy { background: #f0fdf4; border: 2px solid #bbf7d0; }
+    .captable-card.unhealthy { background: #fff5f5; border: 2px solid #fecaca; }
+    .captable-card .ct-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+    .captable-card.healthy .ct-label { color: #16a34a; }
+    .captable-card.unhealthy .ct-label { color: #dc2626; }
+    .captable-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+    .captable-card.healthy h4 { color: #14532d; }
+    .captable-card.unhealthy h4 { color: #7f1d1d; }
+    .captable-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .captable-card ul li { font-size: 0.9rem; color: var(--body); line-height: 1.55; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .captable-card ul li::before { flex-shrink: 0; font-weight: 700; margin-top: 0.05rem; }
+    .captable-card.healthy ul li::before { content: "✓"; color: #16a34a; }
+    .captable-card.unhealthy ul li::before { content: "✗"; color: #dc2626; }
+
+    /* Term block */
+    .term-block { border-radius: 14px; border: 2px solid var(--border); margin: 2.5rem 0; overflow: hidden; transition: box-shadow 0.2s; }
+    .term-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .term-header { background: var(--navy); padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; }
+    .term-number { width: 38px; height: 38px; background: var(--gold); color: var(--near-black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; }
+    .term-header-text h3 { font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 0.2rem; }
+    .term-header-text span { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    .term-body { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .term-row { display: grid; grid-template-columns: 120px 1fr; gap: 1rem; align-items: start; padding: 1rem; border-radius: 8px; }
+    .term-row.healthy-row { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .term-row.risky-row { background: #fff5f5; border: 1px solid #fecaca; }
+    .term-row.mindful-row { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.25); }
+    .term-row-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem; padding-top: 0.1rem; }
+    .healthy-row .term-row-label { color: #16a34a; }
+    .risky-row .term-row-label { color: #dc2626; }
+    .mindful-row .term-row-label { color: #92650a; }
+    .term-row-content { font-size: 0.93rem; color: var(--body); line-height: 1.7; }
+    .term-row-content strong { color: var(--near-black); }
+
+    /* Warning / tip boxes */
+    .warning-box { background: #fff8f0; border-left: 5px solid var(--gold); border-radius: 0 10px 10px 0; padding: 1.5rem; margin: 2rem 0; }
+    .warning-box p { font-size: 0.95rem; color: #78350f; line-height: 1.75; margin: 0; }
+
+    /* Takeaway box */
+    .takeaway-box { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* Part nav */
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    /* Share bar */
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    /* Coffee CTA */
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    /* Series card */
+    .series-card { border: 2px solid rgba(15,52,96,0.15); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; background: white; }
+    .series-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li a { font-size: 0.87rem; color: var(--body); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; transition: color 0.2s; line-height: 1.4; }
+    .series-list li a:hover { color: var(--navy); }
+    .series-list li a.current { color: var(--navy); font-weight: 600; }
+    .part-dot { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; }
+    .series-list li a.current .part-dot { background: var(--navy); color: white; }
+    .series-list li a:not(.current) .part-dot { background: var(--border); color: var(--body); }
+
+    /* Back link */
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--navy); }
+    .back-link:hover svg { transform: translateX(-3px); }
+    .back-link svg { transition: transform 0.2s; }
+
+    /* Footer */
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .captable-grid { grid-template-columns: 1fr; }
+      .term-row { grid-template-columns: 1fr; gap: 0.5rem; }
+      .term-row-label { margin-bottom: 0.25rem; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Traction-Based Angel Investing — Part 2</span>
+    </div>
+    <div class="series-badge">📈 Series — Part 2 of 2</div>
+    <h1>Invest with Healthy Terms. Be an Investor, Not a Vulture.</h1>
+    <p class="subtitle">The four terms that make or break a venture deal — and how to use them in a way that protects your capital without destroying the founder's will to build.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        8 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Deal Terms</span>
+    </div>
+  </div>
+</section>
+
+<!-- BACK LINK -->
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="article-layout">
+
+  <article class="article-body">
+
+    <p class="article-lead">
+      The term <strong>"vulture capitalist"</strong> was popularized during the dot-com bubble. Back then, investors would swoop in when startups were desperate, loading them with toxic terms that killed founder equity and destroyed the very ventures they were supposed to back.
+    </p>
+
+    <p>Fast forward to today. The tactics are more subtle — but they still exist. And once you know exactly what these terms look like, you'll never unknowingly become the predator in a deal again.</p>
+
+    <div class="pull-quote">
+      A great investor partners with the founder to grow the venture. A predatory investor preys on it. Your stake on the cap table will tell everyone which one you are.
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- CAP TABLE -->
+    <h2 id="cap-table">The Cap Table as Your Reputation</h2>
+
+    <p>Before we get into specific terms, understand this: <strong>a cap table is not just a spreadsheet.</strong> It's a signal to every future investor, employee, and acquirer about how this company was built and who it was built for. A healthy cap table attracts capital. An unhealthy one repels it.</p>
+
+    <div class="captable-grid">
+      <div class="captable-card healthy">
+        <div class="ct-label">✅ Healthy Cap Table</div>
+        <h4>Everyone has a reason to win</h4>
+        <ul>
+          <li>Founders are motivated to build</li>
+          <li>Investors are protected, but not predatory</li>
+          <li>Employees are rewarded for contribution</li>
+          <li>Future investors are confident to join in</li>
+          <li>1× non-participating preference — clean and fair</li>
+        </ul>
+      </div>
+      <div class="captable-card unhealthy">
+        <div class="ct-label">🚫 Unhealthy Cap Table</div>
+        <h4>Red flags every investor should spot</h4>
+        <ul>
+          <li><strong>Dead co-founder equity:</strong> Mr. Rahman owns 15% and never comes to the office</li>
+          <li><strong>Useless advisors:</strong> Owning more than 1% for occasional Zoom calls (industry standard: 0.25%–1%)</li>
+          <li><strong>No ESOP allocated:</strong> No plan to reward talented, hard-working employees</li>
+          <li><strong>Complicated stack</strong> of SAFEs, notes, and side deals with no clean structure</li>
+          <li><strong>2–3× liquidation preferences</strong> that kill founder motivation at exit</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <p>⚡ <strong>Before you invest, ask for the full cap table.</strong> If a founder hesitates or says it's "complicated," that's your answer. Clean companies share clean cap tables — immediately and without friction.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- TERMS -->
+    <h2 id="terms">The Four Terms Every Angel Must Know</h2>
+    <p>These are the terms that separate investors who build lasting venture relationships from those who burn bridges and end up with nothing at exit.</p>
+
+    <!-- TERM 1 -->
+    <div class="term-block" id="term-1">
+      <div class="term-header">
+        <div class="term-number">1</div>
+        <div class="term-header-text">
+          <h3>Liquidation Preferences</h3>
+          <span>Who gets paid first — and how much — when the company exits</span>
+        </div>
+      </div>
+      <div class="term-body">
+        <div class="term-row healthy-row">
+          <div class="term-row-label">✅ Healthy</div>
+          <div class="term-row-content"><strong>1× non-participating preference.</strong> You get your money back first, but you don't double-dip. If the exit is large, you convert to equity and share in the upside alongside the founder.</div>
+        </div>
+        <div class="term-row risky-row">
+          <div class="term-row-label">🚫 Risky</div>
+          <div class="term-row-content"><strong>2–3× or participating preferences.</strong> Investors may win, but founders receive zero in small or mid-sized exits. This destroys morale and makes it nearly impossible to hire and retain the talent needed to grow the company.</div>
+        </div>
+        <div class="term-row mindful-row">
+          <div class="term-row-label">⚡ Mindful Use</div>
+          <div class="term-row-content">Stick to <strong>1× non-participating</strong> unless this is an unusual risk case with specific justification. Anything higher requires a strong reason — and a founder who genuinely understands and accepts the implications.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERM 2 -->
+    <div class="term-block" id="term-2">
+      <div class="term-header">
+        <div class="term-number">2</div>
+        <div class="term-header-text">
+          <h3>Anti-Dilution Clauses</h3>
+          <span>Your protection against down rounds — and how it can go wrong</span>
+        </div>
+      </div>
+      <div class="term-body">
+        <div class="term-row healthy-row">
+          <div class="term-row-label">✅ Healthy</div>
+          <div class="term-row-content"><strong>Weighted-average anti-dilution.</strong> A fair protection mechanism against down rounds. It adjusts your share price proportionally, so you're protected without punishing the founder or scaring away future investors.</div>
+        </div>
+        <div class="term-row risky-row">
+          <div class="term-row-label">🚫 Risky</div>
+          <div class="term-row-content"><strong>Full ratchet anti-dilution.</strong> This punishes founders heavily in any future round at a lower valuation — dramatically increasing investor ownership at the founder's expense. It signals toxicity to every investor who comes after you.</div>
+        </div>
+        <div class="term-row mindful-row">
+          <div class="term-row-label">⚡ Mindful Use</div>
+          <div class="term-row-content">Use <strong>weighted-average only</strong> as a standard. Full ratchet should be reserved exclusively for bridge or rescue rounds — where it may be necessary to attract capital — or used during high valuations as a balancing mechanism negotiated transparently with the founder.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERM 3 -->
+    <div class="term-block" id="term-3">
+      <div class="term-header">
+        <div class="term-number">3</div>
+        <div class="term-header-text">
+          <h3>Board Seats & Control</h3>
+          <span>Protecting your interests without hijacking the founder's strategy</span>
+        </div>
+      </div>
+      <div class="term-body">
+        <div class="term-row healthy-row">
+          <div class="term-row-label">✅ Healthy</div>
+          <div class="term-row-content"><strong>Proportional representation.</strong> Your board seat reflects your stake. You have a meaningful voice in governance, but the founder still drives strategy. This is how companies get built and scaled properly.</div>
+        </div>
+        <div class="term-row risky-row">
+          <div class="term-row-label">🚫 Risky</div>
+          <div class="term-row-content"><strong>Majority control for a single investor.</strong> Giving one investor the power to override founders on operational decisions creates paralysis, destroys trust, and makes it nearly impossible for the company to move at startup speed.</div>
+        </div>
+        <div class="term-row mindful-row">
+          <div class="term-row-label">⚡ Mindful Use</div>
+          <div class="term-row-content">Ensure boards are balanced and founder-led. <strong>Reserve veto rights only for major decisions</strong> — exits, financing rounds, issuing new share classes. Your job as an investor is to govern, not to operate.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERM 4 -->
+    <div class="term-block" id="term-4">
+      <div class="term-header">
+        <div class="term-number">4</div>
+        <div class="term-header-text">
+          <h3>Information & Protective Rights</h3>
+          <span>Staying informed without micromanaging the people you backed</span>
+        </div>
+      </div>
+      <div class="term-body">
+        <div class="term-row healthy-row">
+          <div class="term-row-label">✅ Healthy</div>
+          <div class="term-row-content"><strong>Monthly or quarterly reporting</strong> with veto rights on major decisions: mergers, liquidation, new share classes. You stay informed, you maintain governance leverage, and the founder can focus on building.</div>
+        </div>
+        <div class="term-row risky-row">
+          <div class="term-row-label">🚫 Risky</div>
+          <div class="term-row-content"><strong>Daily operational vetoes and investor micromanagement.</strong> This creates decision paralysis, kills founder autonomy, and burns through the trust that makes early-stage investing work. No great founder will accept this — and if they do, they won't stay.</div>
+        </div>
+        <div class="term-row mindful-row">
+          <div class="term-row-label">⚡ Mindful Use</div>
+          <div class="term-row-content">Protect your investment through <strong>structured reporting and clear governance triggers</strong> — not daily interference. The founders you want to back are the ones who resent micromanagement. That's a feature, not a bug.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- KEY TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Series Wrap-Up: The Full Traction Investor Playbook</h3>
+      <ul>
+        <li>Measure retention (Day 7, Day 30), revenue per user, and building velocity — not vanity metrics.</li>
+        <li>Read the cap table before you read the pitch deck. A messy cap table is a dealbreaker.</li>
+        <li>Use 1× non-participating liquidation preferences as your default. Anything above requires strong justification.</li>
+        <li>Weighted-average anti-dilution protects you fairly. Full ratchet signals predatory intent to every investor who comes after.</li>
+        <li>Take a board seat proportional to your stake. Govern, don't operate.</li>
+        <li>Monthly reporting + veto rights on major decisions is all the protection you need. Don't handcuff the founders you paid to build.</li>
+        <li>Your cap table stake tells every future investor, employee, and acquirer exactly who you are. Be someone worth partnering with.</li>
+      </ul>
+    </div>
+
+    <!-- SERIES NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-1.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous in Series</span>
+        <span class="nav-title">Traction-Based Investing — Part 1: The 3 Signals</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Back to Blog →</span>
+        <span class="nav-title">Browse all venture investing articles</span>
+      </a>
+    </div>
+
+    <!-- SHARE BAR -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-2.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Invest with healthy terms — be an investor, not a vulture. Great read from Capallo: https://blog.capallo.co/posts/traction-based-angel-investing-part-2.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Be an investor, not a vulture. The 4 deal terms that make or break ventures in Bangladesh&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-2.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <!-- COFFEE CTA -->
+    <div class="coffee-cta">
+      <p>If this series helped you understand how to invest smarter — with terms that protect your capital and keep great founders motivated — consider supporting our work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="series-card">
+      <h4>📈 This Series</h4>
+      <ul class="series-list">
+        <li>
+          <a href="angel-investing-bangladesh.html">
+            <span class="part-dot">0</span>
+            The Full Angel Investing Playbook
+          </a>
+        </li>
+        <li>
+          <a href="traction-based-angel-investing-part-1.html">
+            <span class="part-dot">1</span>
+            Traction Investing — Part 1: 3 Signals
+          </a>
+        </li>
+        <li>
+          <a href="traction-based-angel-investing-part-2.html" class="current">
+            <span class="part-dot">2</span>
+            Traction Investing — Part 2 (You are here)
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#cap-table">The Cap Table as Your Reputation</a></li>
+        <li><a href="#terms">The Four Terms to Know</a></li>
+        <li><a href="#term-1">Term #1 — Liquidation Preferences</a></li>
+        <li><a href="#term-2">Term #2 — Anti-Dilution Clauses</a></li>
+        <li><a href="#term-3">Term #3 — Board Seats & Control</a></li>
+        <li><a href="#term-4">Term #4 — Information Rights</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo gives you access to vetted deals with clean terms, investor protection, and full portfolio support.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('h2[id], .term-block[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
