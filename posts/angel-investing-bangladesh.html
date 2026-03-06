@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel Investing in Bangladesh — Capallo Blog</title>
+  <meta name="description" content="The simple, belief & traction based playbook anyone can learn to back the innovations of the future in Bangladesh's emerging private markets.">
+  <meta name="keywords" content="angel investing Bangladesh, venture investing, startup investing Dhaka, angel investor playbook, pre-seed investing Bangladesh">
+  <meta property="og:title" content="Angel Investing in Bangladesh — Capallo Blog">
+  <meta property="og:description" content="The simple, belief & traction based playbook anyone can learn to back the innovations of the future.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/angel-investing-bangladesh.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/angel-investing-bangladesh.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter, system-ui, sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0f3460;
+      --dark-navy: #16213e;
+      --near-black: #1a1a2e;
+      --gold: #fbbf24;
+      --green: #10b981;
+      --body: #4a5568;
+      --light-bg: #f7fafc;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--near-black);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: box-shadow 0.3s;
+    }
+    .nav-container {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 3rem;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; width: auto; }
+    .nav-blog-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold);
+      border-left: 2px solid var(--border); padding-left: 0.75rem;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; display: inline-block; }
+    .btn-primary { background: var(--navy); color: white; }
+    .btn-primary:hover { background: var(--dark-navy); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,52,96,0.3); }
+    .btn-secondary { background: white; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      padding: 130px 3rem 60px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      color: white;
+    }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.82rem; color: rgba(255,255,255,0.6);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .article-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3rem; font-weight: 800; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .article-hero .subtitle {
+      font-size: 1.15rem; color: rgba(255,255,255,0.82);
+      line-height: 1.7; margin-bottom: 2rem; max-width: 700px;
+    }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .meta-item svg { opacity: 0.7; }
+    .read-time-badge {
+      background: rgba(251,191,36,0.2); color: var(--gold);
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px;
+    }
+
+    /* ── LAYOUT ── */
+    .article-layout {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 320px;
+      gap: 4rem; padding: 4rem 3rem;
+      align-items: start;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body { min-width: 0; }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.9rem; font-weight: 700; color: var(--navy);
+      margin: 2.5rem 0 1rem; line-height: 1.3;
+    }
+    .article-body h3 {
+      font-size: 1.2rem; font-weight: 700; color: var(--near-black);
+      margin: 2rem 0 0.75rem;
+    }
+    .article-body p {
+      color: var(--body); font-size: 1.02rem; line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+
+    /* Intro lead */
+    .article-lead {
+      font-size: 1.15rem; color: #2d3748; line-height: 1.85;
+      border-left: 4px solid var(--gold); padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Divider */
+    .article-divider {
+      border: none; border-top: 2px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Fact block */
+    .fact-block {
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--navy);
+      border-radius: 0 12px 12px 0;
+      padding: 2rem 2rem 2rem 2rem;
+      margin: 2rem 0;
+    }
+    .fact-block .fact-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--navy);
+      background: rgba(15,52,96,0.08); padding: 0.3rem 0.75rem;
+      border-radius: 20px; margin-bottom: 1rem;
+    }
+    .fact-block h3 { font-size: 1.15rem; color: var(--near-black); margin-bottom: 0.75rem; }
+    .fact-block p { color: var(--body); font-size: 0.97rem; line-height: 1.8; margin-bottom: 0.75rem; }
+    .fact-block p:last-child { margin-bottom: 0; }
+
+    /* Example box */
+    .example-box {
+      background: rgba(15,52,96,0.04);
+      border: 1px solid rgba(15,52,96,0.12);
+      border-radius: 10px; padding: 1.5rem;
+      margin: 1.25rem 0;
+    }
+    .example-box .example-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .example-box p { font-size: 0.93rem; color: var(--body); line-height: 1.75; margin-bottom: 0.5rem; }
+    .example-box p:last-child { margin-bottom: 0; }
+
+    /* Math/formula box */
+    .formula-box {
+      background: var(--near-black);
+      border-radius: 10px; padding: 1.5rem 2rem;
+      margin: 1.5rem 0; font-family: 'Courier New', monospace;
+    }
+    .formula-box .formula-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .formula-box p {
+      color: #e2e8f0; font-size: 0.92rem; line-height: 1.9;
+      margin-bottom: 0.25rem; font-family: 'Courier New', monospace;
+    }
+    .formula-box .formula-result {
+      color: var(--gold); font-weight: 700; margin-top: 0.5rem;
+      padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Step grid */
+    .steps-grid { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+    .step-item {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      background: white; border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.25rem;
+    }
+    .step-number {
+      min-width: 36px; height: 36px; background: var(--navy);
+      color: white; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .step-content h4 { font-size: 1rem; font-weight: 700; color: var(--near-black); margin-bottom: 0.4rem; }
+    .step-content p { font-size: 0.92rem; color: var(--body); line-height: 1.7; margin: 0; }
+
+    /* Comparison cards */
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.25rem; margin: 1.5rem 0;
+    }
+    .compare-card { border-radius: 12px; padding: 1.75rem; }
+    .compare-card.belief {
+      background: linear-gradient(135deg, rgba(15,52,96,0.05) 0%, rgba(15,52,96,0.08) 100%);
+      border: 2px solid rgba(15,52,96,0.15);
+    }
+    .compare-card.traction {
+      background: linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(16,185,129,0.08) 100%);
+      border: 2px solid rgba(16,185,129,0.2);
+    }
+    .compare-card h4 {
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .compare-card.belief h4 { color: var(--navy); }
+    .compare-card.traction h4 { color: #065f46; }
+    .compare-card p { font-size: 0.9rem; color: var(--body); line-height: 1.7; margin-bottom: 0.5rem; }
+    .compare-card .tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      padding: 0.25rem 0.65rem; border-radius: 20px; letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .compare-card.belief .tag { background: rgba(15,52,96,0.1); color: var(--navy); }
+    .compare-card.traction .tag { background: rgba(16,185,129,0.12); color: #065f46; }
+
+    /* Return targets table */
+    .returns-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+    .returns-table thead { background: var(--navy); }
+    .returns-table thead th { color: white; padding: 0.9rem 1.25rem; text-align: left; font-size: 0.85rem; font-weight: 600; }
+    .returns-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .returns-table tbody tr:last-child { border-bottom: none; }
+    .returns-table tbody tr:hover { background: var(--light-bg); }
+    .returns-table tbody td { padding: 0.9rem 1.25rem; font-size: 0.9rem; color: var(--body); }
+    .returns-table tbody td:first-child { font-weight: 700; color: var(--near-black); }
+    .returns-table .highlight-row td { color: var(--navy); font-weight: 600; }
+    .returns-table .highlight-row { background: rgba(15,52,96,0.04); }
+
+    /* Where-to-find list */
+    .source-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin: 1.25rem 0; }
+    .source-list li {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1rem 1.25rem; background: white;
+      border: 1px solid var(--border); border-radius: 10px;
+      font-size: 0.93rem; color: var(--body); line-height: 1.6;
+    }
+    .source-list li .source-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .source-list li strong { color: var(--near-black); }
+
+    /* Warning box */
+    .warning-box {
+      background: #fff8f0; border-left: 5px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .warning-box p { font-size: 0.95rem; color: #78350f; line-height: 1.75; margin: 0; }
+
+    /* Key takeaway */
+    .takeaway-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: 14px; padding: 2.5rem; margin: 3rem 0;
+      color: white;
+    }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* Coffee CTA */
+    .coffee-cta {
+      background: var(--light-bg); border-radius: 12px;
+      padding: 2rem; text-align: center; margin: 3rem 0;
+      border: 1px solid var(--border);
+    }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #FFDD00; color: #000; padding: 0.8rem 2rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800;
+    }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    /* Share bar */
+    .share-bar {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.5rem 0; border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap;
+    }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem;
+      font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body);
+    }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card {
+      background: var(--light-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem;
+    }
+    .sidebar-card h4 {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a {
+      color: var(--body); text-decoration: none; font-size: 0.88rem;
+      line-height: 1.5; display: block; padding: 0.4rem 0.6rem;
+      border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent;
+    }
+    .toc-list li a:hover { color: var(--navy); background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%);
+      border-radius: 12px; padding: 1.75rem; text-align: center;
+    }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a {
+      display: block; background: white; color: var(--navy);
+      padding: 0.75rem; border-radius: 7px; font-weight: 700;
+      font-size: 0.85rem; text-decoration: none; transition: all 0.2s;
+      margin-bottom: 0.75rem;
+    }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline {
+      background: transparent; color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    /* ── BACK TO BLOG ── */
+    .back-bar {
+      max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0;
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--body); text-decoration: none; font-size: 0.88rem;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--navy); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<!-- ARTICLE HERO -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Angel Investing in Bangladesh</span>
+    </div>
+    <h1>Angel Investing in Bangladesh</h1>
+    <p class="subtitle">The simple, belief & traction based playbook anyone can learn to back the innovations of the future.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        8 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Investor Playbook</span>
+    </div>
+  </div>
+</section>
+
+<!-- BACK LINK -->
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="article-layout">
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <p class="article-lead">
+      Angel investing is either <strong>belief-based</strong> or <strong>traction-based</strong>. Understanding the difference — and knowing which lens to apply in Bangladesh's emerging market — is the foundation of every smart investment decision you'll ever make.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 id="two-types">The Two Types of Angel Investing</h2>
+
+    <div class="compare-grid">
+      <div class="compare-card belief">
+        <span class="tag">Belief-Based</span>
+        <h4>Betting on the Vision</h4>
+        <p>You're betting on the future potential of a market or a founder's vision. The story is strong, but the data is thin — zero or minimal traction.</p>
+        <p>Typical at <strong>pre-seed / idea stage</strong>.</p>
+        <div class="example-box" style="margin-top:1rem;">
+          <div class="example-label">📌 Example</div>
+          <p>You believe Bangladesh's education system will digitize fast, so you back an edtech founder before they show any revenue.</p>
+        </div>
+      </div>
+      <div class="compare-card traction">
+        <span class="tag">Traction-Based</span>
+        <h4>Betting on the Evidence</h4>
+        <p>You're investing because there's proof of demand and execution. Revenue growth, users, unit economics, or partnerships already exist.</p>
+        <p>Typical at <strong>pre-seed / seed stage</strong>.</p>
+        <div class="example-box" style="margin-top:1rem; background: rgba(16,185,129,0.05); border-color: rgba(16,185,129,0.15);">
+          <div class="example-label" style="color:#065f46;">📌 Example</div>
+          <p>A fintech that already has 50,000 active users and is growing 20% month-over-month.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <p>⚡ <strong>In emerging markets like Bangladesh, angels often have to be belief-based</strong> — because traction may take longer to appear. That's not a weakness; it's the opportunity. But it demands even more rigour on the facts below.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 2 -->
+    <h2 id="venture-scale">Fact #1 — Venture-Scale or Pass</h2>
+
+    <p>Before anything else, be ruthless about one question: <strong>Can this business, in this market, reach $50–100M annual revenue run-rate within 5–7 years?</strong> That's annual revenue — not the total cumulative revenue across 5–7 years. If the honest answer is no, pass.</p>
+
+    <div class="fact-block">
+      <div class="fact-label">📐 The Venture-Scale Test</div>
+      <h3>Run the numbers before you believe the story</h3>
+      <div class="example-box">
+        <div class="example-label">🧮 Example Calculation</div>
+        <p>A SaaS startup in Dhaka charges <strong>$100/user/year</strong>.</p>
+        <p>To hit $50M ARR, they'd need <strong>500,000 paying users</strong> by year 5–7.</p>
+        <p>If the total addressable market is only 200,000 potential paid customers — <strong>the math fails. This is not venture scale. Pass.</strong></p>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 3 -->
+    <h2 id="market-math">Fact #2 — The 3-Step Market Math</h2>
+
+    <p>Before you trust a founder's TAM slide, run your own market math. It takes 10 minutes and it will save you from a lot of bad deals.</p>
+
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h4>How big is the TAM?</h4>
+          <p>Count only the people or businesses that can actually pay. Hire Light Castle Partners if necessary. Example: "Doctor's offices in Bangladesh that will pay for e-Rx SaaS." Not all doctors — only those who can and will pay.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h4>What's a realistic market share?</h4>
+          <p>Startups never capture 100% of a market. For new software in Bangladesh, assume <strong>3–5% of TAM</strong> as a realistic ceiling for planning purposes.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h4>Price × Users = Revenue Ceiling</h4>
+          <p>This is your sanity check on the business's upside. If the ceiling is too low, the entry valuation needs to be proportionally lower — or you walk.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <div class="formula-title">📊 Market Math Example</div>
+      <p>TAM: 120,000 potential paying customers</p>
+      <p>Realistic share: 3–5% = 3,600 – 6,000 users</p>
+      <p>Price: $150/user/year</p>
+      <p class="formula-result">Revenue ceiling = $540K – $900K/year</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 4 -->
+    <h2 id="entry-valuation">Fact #3 — Ideal Entry Valuation for an Angel</h2>
+
+    <p>Now apply a revenue multiple to your revenue ceiling to get the future valuation. For early-stage SaaS, be conservative — use <strong>5×</strong>.</p>
+
+    <div class="formula-box">
+      <div class="formula-title">🔢 Entry Valuation Formula</div>
+      <p>Revenue ceiling × 5× multiple = Future valuation</p>
+      <p>$540K × 5 = <strong>$2.7M</strong> future valuation</p>
+      <p>&nbsp;</p>
+      <p>Ideal entry = Future valuation ÷ target ROI</p>
+      <p class="formula-result">$2.7M ÷ 5× ROI = $540K ideal entry valuation</p>
+    </div>
+
+    <div class="warning-box">
+      <p>⚠️ <strong>If founders ask for a $3–4M valuation today, the upside is thin. Walk away or renegotiate the structure.</strong> Hire a corporate lawyer and an investment professional to help you structure it correctly.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 5 -->
+    <h2 id="return-targets">Fact #4 — Aim for a Real Return</h2>
+
+    <p>Global angel playbooks target 5–10× returns. Given Bangladesh's market dynamics, a minimum <strong>2× floor</strong> is the safety net you should never go below. Here's the full return target table:</p>
+
+    <table class="returns-table">
+      <thead>
+        <tr>
+          <th>Return Target</th>
+          <th>Formula</th>
+          <th>Max Entry Valuation</th>
+          <th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10× (ideal)</td>
+          <td>$2.7M ÷ 10</td>
+          <td>≤ $270K entry</td>
+          <td>Excellent deal</td>
+        </tr>
+        <tr class="highlight-row">
+          <td>5× (target)</td>
+          <td>$2.7M ÷ 5</td>
+          <td>≤ $540K entry</td>
+          <td>Good deal</td>
+        </tr>
+        <tr>
+          <td>2× (floor)</td>
+          <td>$2.7M ÷ 2</td>
+          <td>≤ $1.35M entry</td>
+          <td>Minimum acceptable</td>
+        </tr>
+        <tr>
+          <td>Below 2×</td>
+          <td>Ask > $1.35M</td>
+          <td>Any</td>
+          <td>Walk out or renegotiate</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>If the ask is $3–4M for entry, <strong>walk out or renegotiate the structure.</strong> Hire a corporate lawyer and an investment professional like Capallo to structure it properly.</p>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 6 -->
+    <h2 id="unit-economics">Fact #5 — Unit Economics</h2>
+
+    <p>It is the <strong>founder's job</strong> to know their per-transaction unit economics inside and out. If they can't rattle this off confidently, walk away — but stay in touch until they can. Here's the framework to test them with:</p>
+
+    <div class="fact-block">
+      <div class="fact-label">📦 Unit Economics Framework</div>
+      <h3>Ask every founder these questions</h3>
+      <div class="formula-box" style="margin-top:1rem;">
+        <div class="formula-title">Per-Transaction Math</div>
+        <p>Average Order / Transaction Value (AOV): ৳X</p>
+        <p>Take rate / fee: X% → Gross revenue per txn = AOV × X%</p>
+        <p>Variable costs per txn: ৳C (payments, ops, support)</p>
+        <p>Contribution per txn = (AOV × X%) − C</p>
+        <p>&nbsp;</p>
+        <p>Monthly txns per active user: N</p>
+        <p>Contribution per user = N × contribution/txn</p>
+        <p>&nbsp;</p>
+        <p class="formula-result">Break-even users = Fixed monthly costs ÷ Contribution/user</p>
+      </div>
+      <p style="margin-top:1rem; font-size:0.9rem;">Also get clarity from the founder on <strong>why their take rate</strong> (e.g. ~2.5%) is the ideal number for their market — this reveals whether they truly understand their pricing power.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- SECTION 7 -->
+    <h2 id="finding-deals">Where to Find Deals & Founders</h2>
+
+    <ul class="source-list">
+      <li>
+        <span class="source-icon">👥</span>
+        <div><strong>Start with FoF — Friends of Family.</strong> Who's building something real in your network? This is the highest-trust, lowest-friction starting point. Most first angel checks come from here.</div>
+      </li>
+      <li>
+        <span class="source-icon">🌐</span>
+        <div><strong>3rd-party platforms like BD Angels or Biniyog.io.</strong> No deals in your network? These platforms surface structured opportunities — but each has its own pros and cons. Do your own due diligence before relying on their curation.</div>
+      </li>
+      <li>
+        <span class="source-icon">🎤</span>
+        <div><strong>Summits & startup events.</strong> Still stuck? Go to the ecosystem. Attend pitch events, innovation summits, accelerator demo days. Be present where builders are.</div>
+      </li>
+      <li>
+        <span class="source-icon">💼</span>
+        <div><strong>Post on LinkedIn.</strong> Write publicly that you're looking to angel invest in X sector or industry. You'll receive messages from changemakers you'd never encounter otherwise. This works better than most people expect.</div>
+      </li>
+    </ul>
+
+    <!-- KEY TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Know whether you're investing on belief or traction — and size your check accordingly.</li>
+        <li>Always ask: can this business reach $50–100M revenue in 5–7 years? If not, pass.</li>
+        <li>Run your own 3-step market math. Never trust a TAM slide alone.</li>
+        <li>Calculate ideal entry valuation from the revenue ceiling up — not from the founder's ask down.</li>
+        <li>Minimum 2× return floor. Walk away from any deal that doesn't hit it without a structural fix.</li>
+        <li>If a founder can't explain their unit economics, they're not ready for your capital yet.</li>
+      </ul>
+    </div>
+
+    <!-- SHARE BAR -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/angel-investing-bangladesh.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Angel Investing in Bangladesh — great read from Capallo: https://blog.capallo.co/posts/angel-investing-bangladesh.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Angel Investing in Bangladesh — a practical playbook by @Capallo&url=https://blog.capallo.co/posts/angel-investing-bangladesh.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <!-- COFFEE CTA -->
+    <div class="coffee-cta">
+      <p>If this article helped you think more clearly about venture investing in Bangladesh, consider supporting our work. It helps us keep publishing free, high-quality content for investors like you.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">
+        ☕ Buy Us a Coffee
+      </a>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Table of Contents -->
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#two-types">The Two Types of Angel Investing</a></li>
+        <li><a href="#venture-scale">Fact #1 — Venture-Scale or Pass</a></li>
+        <li><a href="#market-math">Fact #2 — The 3-Step Market Math</a></li>
+        <li><a href="#entry-valuation">Fact #3 — Ideal Entry Valuation</a></li>
+        <li><a href="#return-targets">Fact #4 — Aim for a Real Return</a></li>
+        <li><a href="#unit-economics">Fact #5 — Unit Economics</a></li>
+        <li><a href="#finding-deals">Where to Find Deals</a></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo gives you access to vetted deals, investor protection, and ongoing portfolio support.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <!-- Risk note -->
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+
+  </aside>
+
+</div><!-- /article-layout -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // NAV scroll shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+
+  // Active TOC highlight on scroll
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 140) current = s.id;
+    });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
