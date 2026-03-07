@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venture Math 2.0: What It Actually Takes to Return a Fund — Capallo Blog</title>
+  <meta name="description" content="When a VC invests $250K, they secretly need $10M back. Here's the exact math behind fund returners, dilution, TAM, and how VCs actually calculate valuations.">
+  <meta name="keywords" content="venture math fund returner, VC valuation method, dilution startup rounds, TAM SAM investing, angel fund math Bangladesh, startup valuation formula">
+  <meta property="og:title" content="Venture Math 2.0: What It Actually Takes to Return a VC Fund — Capallo Blog">
+  <meta property="og:description" content="VCs don't just invest to make money. They invest to return the entire fund. Here's the exact math most investors never see.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-11.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-11.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0f3460; --dark-navy: #16213e; --near-black: #1a1a2e;
+      --gold: #fbbf24; --green: #10b981; --red: #ef4444;
+      --body: #4a5568; --light-bg: #f7fafc; --border: #e5e7eb; --white: #ffffff;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-secondary { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; background: white; color: var(--navy); border: 2px solid var(--navy); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); color: white; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .topic-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* Hook stat */
+    .hook-stat { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+    .hook-stat .hs-left .hs-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .hook-stat .hs-left p { font-size: 1rem; color: rgba(255,255,255,0.85); line-height: 1.75; margin: 0; }
+    .hook-stat .hs-right { text-align: center; }
+    .hook-stat .hs-invest { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .hook-stat .hs-arrow { font-size: 1.5rem; color: var(--gold); margin: 0.5rem 0; }
+    .hook-stat .hs-amount { font-family: 'Playfair Display', Georgia, serif; font-size: 2.4rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .hook-stat .hs-sub { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.4rem; }
+
+    /* Case study box */
+    .case-study { background: var(--light-bg); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; }
+    .case-study .cs-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.5rem; }
+    .cs-inputs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .cs-input { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; }
+    .cs-input .ci-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #9ca3af; margin-bottom: 0.3rem; }
+    .cs-input .ci-val { font-size: 1.1rem; font-weight: 800; color: var(--navy); }
+    .cs-chain { display: flex; flex-direction: column; gap: 0.5rem; }
+    .cs-chain-row { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 1rem; border-radius: 8px; background: white; border: 1px solid var(--border); }
+    .cs-chain-row .cc-arrow { color: var(--gold); font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+    .cs-chain-row .cc-text { font-size: 0.9rem; color: var(--body); line-height: 1.5; }
+    .cs-chain-row .cc-text strong { color: var(--near-black); }
+    .cs-result { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .cs-result .cr-label { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.65); }
+    .cs-result .cr-val { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 800; color: var(--gold); }
+    .cs-result .cr-sub { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+
+    /* Dilution table */
+    .dilution-section { background: rgba(15,52,96,0.04); border: 2px solid rgba(15,52,96,0.12); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; }
+    .dilution-section .ds-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 0.5rem; }
+    .dilution-section .ds-sub { font-size: 0.88rem; color: var(--body); margin-bottom: 1.5rem; }
+    .dilution-table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; }
+    .dilution-table th { background: var(--navy); color: white; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.7rem 1rem; text-align: left; }
+    .dilution-table th:first-child { border-radius: 6px 0 0 0; }
+    .dilution-table th:last-child { border-radius: 0 6px 0 0; }
+    .dilution-table td { padding: 0.75rem 1rem; font-size: 0.88rem; color: var(--body); border-bottom: 1px solid var(--border); background: white; }
+    .dilution-table tr:last-child td { border-bottom: none; }
+    .dilution-table tr:last-child td:first-child { border-radius: 0 0 0 6px; }
+    .dilution-table tr:last-child td:last-child { border-radius: 0 0 6px 0; }
+    .dilution-table td strong { color: var(--near-black); }
+    .dilution-walkthrough { display: flex; flex-direction: column; gap: 0.5rem; }
+    .dw-row { display: grid; grid-template-columns: 160px 1fr auto; gap: 0.75rem; align-items: center; padding: 0.7rem 1rem; border-radius: 8px; background: white; border: 1px solid var(--border); }
+    .dw-row .dw-round { font-size: 0.82rem; font-weight: 700; color: var(--navy); }
+    .dw-row .dw-calc { font-family: 'Courier New', monospace; font-size: 0.82rem; color: var(--body); }
+    .dw-row .dw-result { font-size: 0.88rem; font-weight: 700; color: var(--near-black); text-align: right; }
+    .dw-final { background: rgba(16,185,129,0.06); border: 1.5px solid rgba(16,185,129,0.2); border-radius: 8px; padding: 0.85rem 1rem; text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: var(--body); }
+    .dw-final strong { color: #065f46; }
+
+    /* Why invest anyway */
+    .why-invest { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .why-invest .wi-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .wi-items { display: flex; flex-direction: column; gap: 0.65rem; }
+    .wi-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.92rem; color: rgba(255,255,255,0.88); line-height: 1.6; }
+    .wi-item::before { content: "→"; color: var(--gold); font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+    .wi-item strong { color: white; }
+
+    /* TAM/SAM */
+    .tam-section { margin: 1.75rem 0; }
+    .tam-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .tam-card { border-radius: 12px; padding: 1.5rem; }
+    .tam-card.good { background: #f0fdf4; border: 2px solid #bbf7d0; }
+    .tam-card.bad { background: #fff5f5; border: 2px solid #fecaca; }
+    .tam-card .tc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .tam-card.good .tc-label { color: #16a34a; }
+    .tam-card.bad .tc-label { color: #dc2626; }
+    .tam-card .tc-market { font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .tam-card.good .tc-market { color: #16a34a; }
+    .tam-card.bad .tc-market { color: #dc2626; }
+    .tam-card .tc-share { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .tam-card.good .tc-share { color: #14532d; }
+    .tam-card.bad .tc-share { color: #7f1d1d; }
+    .tam-card p { font-size: 0.85rem; color: var(--body); line-height: 1.6; margin: 0; }
+
+    /* VC valuation method */
+    .valuation-method { background: var(--near-black); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .valuation-method .vm-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .vm-setup { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .vm-input { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 0.9rem; text-align: center; }
+    .vm-input .vi-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.35rem; }
+    .vm-input .vi-val { font-size: 1rem; font-weight: 800; color: white; }
+    .vm-steps { display: flex; flex-direction: column; gap: 0.75rem; }
+    .vm-step { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem 1.25rem; }
+    .vm-step .vs-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .vm-step .vs-calc { font-family: 'Courier New', monospace; font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-bottom: 0.35rem; }
+    .vm-step .vs-result { font-size: 1rem; font-weight: 800; color: white; }
+    .vm-conclusion { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); border-radius: 10px; padding: 1.25rem; margin-top: 1rem; }
+    .vm-conclusion .vc-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .vm-conclusion .vc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .vm-conclusion .vc-item { text-align: center; }
+    .vm-conclusion .vc-item .vci-label { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-bottom: 0.25rem; }
+    .vm-conclusion .vc-item .vci-val { font-size: 1.1rem; font-weight: 800; color: white; }
+
+    /* Pull quote */
+    .pull-quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem; border-left: 5px solid var(--gold); margin: 2.5rem 0; background: rgba(15,52,96,0.03); border-radius: 0 12px 12px 0; }
+
+    /* Angel formula */
+    .angel-formula { background: rgba(251,191,36,0.06); border: 2px solid rgba(251,191,36,0.3); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .angel-formula .af-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #92650a; margin-bottom: 1rem; }
+    .af-formula { background: white; border: 1px solid rgba(251,191,36,0.25); border-radius: 10px; padding: 1.25rem; text-align: center; font-family: 'Courier New', monospace; margin-bottom: 1.25rem; }
+    .af-formula .aff-text { font-size: 1rem; font-weight: 700; color: var(--near-black); line-height: 1.6; }
+    .af-questions { display: flex; flex-direction: column; gap: 0.5rem; }
+    .af-question { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: var(--body); line-height: 1.6; }
+    .af-question::before { content: "?"; font-weight: 800; color: #92650a; flex-shrink: 0; font-size: 0.9rem; }
+
+    /* BD play */
+    .bd-play { background: rgba(15,52,96,0.04); border: 2px solid rgba(15,52,96,0.12); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .bd-play .bp-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+    .bd-play p { font-size: 0.95rem; color: var(--body); line-height: 1.8; margin-bottom: 0.75rem; }
+    .bd-strategies { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+    .bd-strategy { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 1rem; background: white; border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; color: var(--body); line-height: 1.6; }
+    .bd-strategy::before { content: "→"; color: var(--navy); font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+    .bd-strategy strong { color: var(--near-black); }
+
+    /* Closing */
+    .closing-box { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2.5rem; margin: 2.5rem 0; color: white; }
+    .closing-box .cl-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .closing-box h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 800; color: white; line-height: 1.4; margin-bottom: 1rem; }
+    .closing-box p { color: rgba(255,255,255,0.75); font-size: 0.95rem; line-height: 1.75; margin: 0; }
+
+    /* Takeaway */
+    .takeaway-box { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--navy); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .hook-stat { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+      .cs-inputs { grid-template-columns: 1fr 1fr; }
+      .vm-setup { grid-template-columns: 1fr; }
+      .vm-conclusion .vc-grid { grid-template-columns: 1fr 1fr; }
+      .tam-compare { grid-template-columns: 1fr; }
+      .dw-row { grid-template-columns: 130px 1fr; }
+      .dw-row .dw-result { display: none; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Venture Math 2.0</span>
+    </div>
+    <div class="topic-badge">🧮 Venture Math 2.0</div>
+    <h1>Venture Math 2.0: What It Actually Takes to Return a VC Fund (and Why Valuation Is Just a Number)</h1>
+    <p class="subtitle">When a VC invests $250K, they secretly need $10M back. Here's the exact math behind fund returners, dilution waterfalls, TAM requirements, and how valuations are actually calculated.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        10 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Venture Math 2.0</span>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">
+      Venture math isn't normal math. When a VC writes a $250K cheque, they are not hoping to make $500K back. They are calculating a path to $10M — minimum. Once you understand why, every funding decision in the startup world starts making perfect sense.
+    </p>
+
+    <div class="hook-stat">
+      <div class="hs-left">
+        <div class="hs-label">💡 The Hidden Expectation</div>
+        <p>VCs don't just invest to make money. They invest to <strong>return the entire fund.</strong> If a fund manages $10M, it doesn't matter how many startups they back — they need at least one company to return 10×, 20×, or 100× to make up for the 8–9 that will fail. They chase fund returners, not small winners.</p>
+      </div>
+      <div class="hs-right">
+        <div class="hs-invest">$250K invested</div>
+        <div class="hs-arrow">↓</div>
+        <div class="hs-amount">$10M</div>
+        <div class="hs-sub">minimum expected return</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- CASE STUDY -->
+    <h2 id="case-study">The $10M Fund Case Study</h2>
+
+    <p>Let's make this concrete with a real example that walks through every number step by step.</p>
+
+    <div class="case-study">
+      <div class="cs-label">📐 $10M Fund — Full Math Walkthrough</div>
+      <div class="cs-inputs">
+        <div class="cs-input">
+          <div class="ci-label">Fund Size</div>
+          <div class="ci-val">$10,000,000</div>
+        </div>
+        <div class="cs-input">
+          <div class="ci-label">Check Size</div>
+          <div class="ci-val">$250,000</div>
+        </div>
+        <div class="cs-input">
+          <div class="ci-label">Post-Money Valuation</div>
+          <div class="ci-val">$10,000,000</div>
+        </div>
+        <div class="cs-input">
+          <div class="ci-label">Ownership at Entry</div>
+          <div class="ci-val">2.5%</div>
+        </div>
+      </div>
+      <div class="cs-chain">
+        <div class="cs-chain-row">
+          <span class="cc-arrow">1</span>
+          <span class="cc-text">Entry ownership: <strong>2.5%</strong> at $10M post-money. Stake worth $250K — exactly what was invested.</span>
+        </div>
+        <div class="cs-chain-row">
+          <span class="cc-arrow">2</span>
+          <span class="cc-text">After ~65% dilution across future rounds, ownership shrinks to <strong>0.875%</strong> by exit.</span>
+        </div>
+        <div class="cs-chain-row">
+          <span class="cc-arrow">3</span>
+          <span class="cc-text">To turn $250K into $10M (40× return), the exit valuation must be: $10M ÷ 0.00875 = <strong>~$1.14 billion.</strong></span>
+        </div>
+      </div>
+      <div class="cs-result">
+        <div>
+          <div class="cr-label">Required Exit Valuation</div>
+          <div class="cr-val">~$1.14B</div>
+        </div>
+        <div>
+          <div class="cr-label">That's a</div>
+          <div class="cr-val">114×</div>
+        </div>
+        <div>
+          <div class="cr-label">This is why every VC asks</div>
+          <div class="cr-sub" style="color:rgba(255,255,255,0.75); font-size:0.88rem; font-weight:600;">"Can this be a billion-dollar company?"</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- DILUTION EXPLAINER -->
+    <h2 id="dilution">How Dilution Actually Works — Round by Round</h2>
+
+    <p>Every time a startup issues new shares to raise money, total shares in the company increase — and your percentage ownership goes down. Your number of shares stays exactly the same. But your slice of the pie gets smaller as the pie grows.</p>
+
+    <div class="dilution-section">
+      <div class="ds-label">📉 Typical Dilution Per Round</div>
+      <div class="ds-sub">Why VCs assume ~65% cumulative dilution over a startup's life:</div>
+      <table class="dilution-table">
+        <thead>
+          <tr>
+            <th>Round Transition</th>
+            <th>Dilution Per Round</th>
+            <th>Cumulative Dilution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Seed → Series A</td>
+            <td>25–30%</td>
+            <td>~25–30%</td>
+          </tr>
+          <tr>
+            <td>Series A → Series B</td>
+            <td>20–25%</td>
+            <td>~45–50%</td>
+          </tr>
+          <tr>
+            <td>Series B → Series C+</td>
+            <td>15–20%</td>
+            <td><strong>~60–65%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.88rem; color:var(--body); margin-bottom:1.25rem;">By exit, early investors typically own only 30–40% of their original stake — the "65% dilution" figure is shorthand for: <strong>you'll keep roughly one-third of what you started with.</strong></p>
+      <div class="dilution-walkthrough">
+        <div class="dw-row">
+          <span class="dw-round">Entry (Seed)</span>
+          <span class="dw-calc">Starting ownership</span>
+          <span class="dw-result">2.5%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-round">After Series A</span>
+          <span class="dw-calc">2.5% × 0.70 (30% dilution)</span>
+          <span class="dw-result">1.75%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-round">After Series B</span>
+          <span class="dw-calc">1.75% × 0.75 (25% dilution)</span>
+          <span class="dw-result">1.31%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-round">After Series C</span>
+          <span class="dw-calc">1.31% × 0.75 (25% dilution)</span>
+          <span class="dw-result">0.98%</span>
+        </div>
+        <div class="dw-final">
+          Final ownership at exit: <strong>~0.875–0.98%</strong> — roughly one-third of your original 2.5% stake
+        </div>
+      </div>
+    </div>
+
+    <div class="why-invest">
+      <div class="wi-label">💡 So Why Do VCs Still Invest Knowing This?</div>
+      <div class="wi-items">
+        <div class="wi-item">Because <strong>even a tiny slice of a billion-dollar pie is worth millions.</strong> What matters isn't how much you own — it's what the whole pie grows into.</div>
+        <div class="wi-item">That's why VCs obsess over <strong>exit valuation potential</strong> (needs $500M+), not just current metrics.</div>
+        <div class="wi-item">It's why <strong>fund-returner math</strong> drives every deal: does this one company have a realistic path to return the entire fund?</div>
+        <div class="wi-item">And it's why <strong>Total Addressable Market (TAM)</strong> is the first question — because it tells you the ceiling of how big this company can actually get.</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- TAM/SAM -->
+    <h2 id="tam">Why TAM & SAM Matter So Much</h2>
+
+    <p>If a startup needs to exit at $1.1B and the typical industry exit multiple is 3× revenue, that means the company must generate <strong>~$370M in annual revenue</strong> by exit. The TAM question is really: is there enough market for that to be possible?</p>
+
+    <div class="tam-section">
+      <div class="tam-compare">
+        <div class="tam-card good">
+          <div class="tc-label">✅ SAM of $5B</div>
+          <div class="tc-market">$5B</div>
+          <div class="tc-share">Requires ~7.4% market share</div>
+          <p>Tough — but achievable for a category leader. Room to grow, room to dominate, room for investors to win.</p>
+        </div>
+        <div class="tam-card bad">
+          <div class="tc-label">🚫 SAM of $1B</div>
+          <div class="tc-market">$1B</div>
+          <div class="tc-share">Requires ~37% market share</div>
+          <p>Almost impossible. You'd need to own more than a third of the entire market. The math breaks before you even start.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Smart investors don't just ask <strong>"What's your TAM?"</strong> They ask <strong>"How much of it can this startup realistically eat — and in what timeframe?"</strong> A massive TAM with a small SAM is still a dead end.</p>
+
+    <hr class="article-divider">
+
+    <!-- VC VALUATION METHOD -->
+    <h2 id="valuation">The VC Valuation Method — Simplified</h2>
+
+    <p>VCs don't start with what a company is worth today. They start with <strong>what return they need</strong> and work backwards to find the valuation that makes that return possible. This is the exact opposite of how most founders think about valuation.</p>
+
+    <div class="valuation-method">
+      <div class="vm-label">🔢 Full VC Valuation Worked Example</div>
+      <div class="vm-setup">
+        <div class="vm-input">
+          <div class="vi-label">Target IRR</div>
+          <div class="vi-val">30% / year</div>
+        </div>
+        <div class="vm-input">
+          <div class="vi-label">Investment</div>
+          <div class="vi-val">$8,000,000</div>
+        </div>
+        <div class="vm-input">
+          <div class="vi-label">Exit Horizon</div>
+          <div class="vi-val">5 years</div>
+        </div>
+        <div class="vm-input">
+          <div class="vi-label">Revenue at Exit</div>
+          <div class="vi-val">$20M</div>
+        </div>
+        <div class="vm-input">
+          <div class="vi-label">Industry Multiple</div>
+          <div class="vi-val">5× revenue</div>
+        </div>
+        <div class="vm-input">
+          <div class="vi-label">Exit Value</div>
+          <div class="vi-val">$100M</div>
+        </div>
+      </div>
+      <div class="vm-steps">
+        <div class="vm-step">
+          <div class="vs-num">Step 1 — Estimate Exit Value</div>
+          <div class="vs-calc">$20M revenue × 5× multiple = $100M exit</div>
+          <div class="vs-result">Exit Value: $100M</div>
+        </div>
+        <div class="vm-step">
+          <div class="vs-num">Step 2 — Discount Back to Today (Present Value)</div>
+          <div class="vs-calc">$100M ÷ (1 + 0.30)⁵ = $100M ÷ 3.713 ≈ $26.9M post-money valuation</div>
+          <div class="vs-result">Post-Money Today: ~$26.9M</div>
+        </div>
+        <div class="vm-step">
+          <div class="vs-num">Step 3 — Subtract Investment to Find Pre-Money</div>
+          <div class="vs-calc">$26.9M − $8M investment = $18.9M pre-money</div>
+          <div class="vs-result">Pre-Money: ~$18.9M</div>
+        </div>
+      </div>
+      <div class="vm-conclusion">
+        <div class="vc-label">✅ The VC's Offer</div>
+        <div class="vc-grid">
+          <div class="vc-item">
+            <div class="vci-label">They invest</div>
+            <div class="vci-val">$8M</div>
+          </div>
+          <div class="vc-item">
+            <div class="vci-label">At pre-money</div>
+            <div class="vci-val">$18.9M</div>
+          </div>
+          <div class="vc-item">
+            <div class="vci-label">Post-money</div>
+            <div class="vci-val">$26.9M</div>
+          </div>
+          <div class="vc-item">
+            <div class="vci-label">Ownership</div>
+            <div class="vci-val">~29.7%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      They didn't value the company emotionally. They valued it mathematically to hit their target return. If they need a higher return, they lower the valuation further — not the other way around.
+    </div>
+
+    <p><strong>Valuation isn't about what a founder thinks they deserve.</strong> It's about what an investor believes they can earn. They're not backing a founder's emotion. They're backing the math.</p>
+
+    <hr class="article-divider">
+
+    <!-- ANGEL FORMULA -->
+    <h2 id="angel-formula">For Angel Investors — Apply the Same Logic</h2>
+
+    <p>If you're investing your own capital, the same framework applies. Work backwards from your target return to arrive at the valuation you should be willing to pay.</p>
+
+    <div class="angel-formula">
+      <div class="af-label">📐 The Angel's Pre-Money Formula</div>
+      <div class="af-formula">
+        <div class="aff-text">Pre-Money Valuation =<br>Future Exit Value ÷ (1 + Target Return Rate)^Years − New Investment</div>
+      </div>
+      <div class="af-questions">
+        <div class="af-question">What is my likely ownership percentage at exit after dilution?</div>
+        <div class="af-question">How many future rounds will dilute me — and by how much each time?</div>
+        <div class="af-question">What exit size does this startup need to deliver a 10× return on my entry?</div>
+        <div class="af-question">Does the TAM support that exit size as a realistic outcome?</div>
+      </div>
+    </div>
+
+    <p>Master this, and you'll start spotting underpriced deals before the crowd arrives. You'll also stop feeling like every startup is overvalued — because now you're running the same math the best investors run.</p>
+
+    <hr class="article-divider">
+
+    <!-- BD PLAY -->
+    <h2 id="bd-play">Playing With Local Wisdom — Bangladesh</h2>
+
+    <div class="bd-play">
+      <div class="bp-label">🇧🇩 The Emerging Market Adaptation</div>
+      <p>Private capital flow in Bangladesh is still in its early stages — which means early movers get to set the terms, shape the norms, and capture the upside before the market matures. But copying Silicon Valley's playbook wholesale is a mistake.</p>
+      <div class="bd-strategies">
+        <div class="bd-strategy"><strong>Focus less on the $50M–$100M exit fantasy</strong> and more on cross-border scalable founders. Regional acquisitions and international strategic buyers are the more realistic path to exits at venture-relevant valuations.</div>
+        <div class="bd-strategy"><strong>Structure deals for partial liquidity.</strong> Buybacks and dividend structures can return capital to early angels without requiring a full acquisition — critical in a market with limited exit infrastructure.</div>
+        <div class="bd-strategy"><strong>Play the game with local wisdom.</strong> The fund returner math still applies — but the timelines, exit multiples, and liquidity mechanisms need to be calibrated to the Bangladesh market realities, not imported blindly from the US.</div>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="closing-box">
+      <div class="cl-label">💭 Next Time a Founder's Valuation Seems Too High</div>
+      <h3>Don't just say "your valuation's too high." Reverse-engineer the math.</h3>
+      <p>If the math still doesn't work after you've run the numbers honestly — make your counter-offer backed by math, not emotion. That's how the best angels negotiate. Not by gut feel. By the numbers that actually determine whether the deal can return their portfolio.</p>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>VCs invest to return the entire fund — not just to make money on individual deals. Every cheque is secretly hoping for a fund returner.</li>
+        <li>A $250K investment at a $10M post-money valuation needs a ~$1.14B exit to return $10M — because of dilution down to 0.875% ownership.</li>
+        <li>65% cumulative dilution is the standard assumption: Seed owners keep roughly one-third of their stake by exit after three rounds.</li>
+        <li>TAM is the ceiling test. If the SAM requires 37%+ market share for the math to work, the math doesn't work.</li>
+        <li>VCs calculate valuation backwards from target return — not forwards from current fundamentals. Pre-money = Exit Value ÷ (1 + IRR)^Years − Investment.</li>
+        <li>Angel investors should apply the exact same formula before writing any cheque. Know your diluted ownership, required exit size, and TAM fit.</li>
+        <li>In Bangladesh, adapt the math to local exit realities: cross-border founders, partial liquidity structures, and regional acquisition paths.</li>
+        <li>Next time a valuation seems high, reverse-engineer it. Then make your offer backed by math, not emotion.</li>
+      </ul>
+    </div>
+
+    <!-- PART NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-10.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous Article</span>
+        <span class="nav-title">Master Venture Math to Simplify Angel Investing</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Browse All Articles →</span>
+        <span class="nav-title">More venture investing insights</span>
+      </a>
+    </div>
+
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-11.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Venture Math 2.0 — what it actually takes to return a VC fund: https://blog.capallo.co/posts/traction-based-angel-investing-part-11.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Venture Math 2.0 — why a $250K investment secretly needs a $1.1B exit to return the fund&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-11.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <div class="coffee-cta">
+      <p>If the fund returner math finally clicked for you — and you now know why VCs ask "can this be a billion-dollar company?" — consider supporting this work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#case-study">The $10M Fund Case Study</a></li>
+        <li><a href="#dilution">Dilution — Round by Round</a></li>
+        <li><a href="#tam">Why TAM & SAM Matter</a></li>
+        <li><a href="#valuation">The VC Valuation Method</a></li>
+        <li><a href="#angel-formula">The Angel Formula</a></li>
+        <li><a href="#bd-play">Playing With Local Wisdom</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo surfaces deals where the venture math actually works — vetted traction, modelled dilution, and investor protection built in.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
