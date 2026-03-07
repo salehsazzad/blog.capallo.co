@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venture Investing Through the Lens of Islamic Finance — Capallo Blog</title>
+  <meta name="description" content="The seven pillars of Islamic finance applied to venture investing in Bangladesh. For investors who want value-aligned, Shariah-compliant investment options in high-growth startups.">
+  <meta name="keywords" content="Islamic venture investing Bangladesh, halal angel investing, Mudarabah startup, Musharakah equity, Shariah compliant investing Bangladesh, Islamic finance startups">
+  <meta property="og:title" content="Venture Investing Through the Lens of Islamic Finance — Capallo Blog">
+  <meta property="og:description" content="The seven pillars of Islamic finance applied to angel investing. Riba-free, value-aligned, and structured for Bangladesh's startup ecosystem.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-12.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-12.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0f3460; --dark-navy: #16213e; --near-black: #1a1a2e;
+      --gold: #fbbf24; --green: #10b981; --red: #ef4444;
+      --teal: #0d9488; --teal-light: rgba(13,148,136,0.08);
+      --body: #4a5568; --light-bg: #f7fafc; --border: #e5e7eb; --white: #ffffff;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-secondary { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; background: white; color: var(--navy); border: 2px solid var(--navy); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    /* Special hero for Islamic finance article */
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, #0d3b2e 0%, #0f3460 60%, #1a1a2e 100%); color: white; position: relative; overflow: hidden; }
+    .article-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle at 20% 50%, rgba(13,148,136,0.12) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(251,191,36,0.08) 0%, transparent 50%); pointer-events: none; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .topic-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(13,148,136,0.25); color: #5eead4; padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; border: 1px solid rgba(13,148,136,0.3); }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(13,148,136,0.25); color: #5eead4; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; border: 1px solid rgba(13,148,136,0.3); }
+
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--teal); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* Quran verse */
+    .quran-verse { background: linear-gradient(135deg, #0d3b2e 0%, #0f3460 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; text-align: center; }
+    .qv-arabic { font-family: 'Amiri', Georgia, serif; font-size: 1.6rem; color: var(--gold); line-height: 1.9; margin-bottom: 1rem; direction: rtl; }
+    .qv-translation { font-size: 1rem; color: rgba(255,255,255,0.88); line-height: 1.7; font-style: italic; margin-bottom: 0.5rem; }
+    .qv-source { font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+    /* History box */
+    .history-box { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .history-box .hb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .history-timeline { display: flex; flex-direction: column; gap: 1rem; }
+    .ht-item { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; align-items: start; }
+    .ht-item .ht-era { font-size: 0.75rem; font-weight: 700; color: var(--gold); background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.2); border-radius: 5px; padding: 0.3rem 0.5rem; text-align: center; line-height: 1.3; }
+    .ht-item .ht-text { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.65; }
+    .ht-item .ht-text strong { color: white; }
+
+    /* Pillar block */
+    .pillar-block { margin: 2.5rem 0; border: 2px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .pillar-header { padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.25rem; }
+    .pillar-header .ph-num { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.88rem; font-weight: 800; flex-shrink: 0; color: white; }
+    .pillar-header .ph-arabic { font-family: 'Amiri', Georgia, serif; font-size: 1rem; color: var(--gold); margin-bottom: 0.2rem; }
+    .pillar-header h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; font-weight: 700; margin: 0; line-height: 1.3; }
+    .pillar-body { padding: 0 2rem 2rem; }
+    .pillar-body p { color: var(--body); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+
+    /* Teal pillar theme */
+    .pillar-block.p1 .pillar-header { background: rgba(13,148,136,0.07); border-bottom: 1px solid rgba(13,148,136,0.15); }
+    .pillar-block.p1 .pillar-header .ph-num { background: var(--teal); }
+    .pillar-block.p1 .pillar-header h3 { color: #0d5c54; }
+    .pillar-block.p1 { border-color: rgba(13,148,136,0.2); }
+
+    .pillar-block.p2 .pillar-header { background: rgba(15,52,96,0.06); border-bottom: 1px solid rgba(15,52,96,0.12); }
+    .pillar-block.p2 .pillar-header .ph-num { background: var(--navy); }
+    .pillar-block.p2 .pillar-header h3 { color: var(--navy); }
+    .pillar-block.p2 { border-color: rgba(15,52,96,0.15); }
+
+    .pillar-block.p3 .pillar-header { background: rgba(251,191,36,0.07); border-bottom: 1px solid rgba(251,191,36,0.2); }
+    .pillar-block.p3 .pillar-header .ph-num { background: #92650a; }
+    .pillar-block.p3 .pillar-header h3 { color: #78350f; }
+    .pillar-block.p3 { border-color: rgba(251,191,36,0.25); }
+
+    .pillar-block.p4 .pillar-header { background: rgba(139,92,246,0.06); border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .pillar-block.p4 .pillar-header .ph-num { background: #7c3aed; }
+    .pillar-block.p4 .pillar-header h3 { color: #5b21b6; }
+    .pillar-block.p4 { border-color: rgba(139,92,246,0.18); }
+
+    .pillar-block.p5 .pillar-header { background: rgba(239,68,68,0.05); border-bottom: 1px solid rgba(239,68,68,0.12); }
+    .pillar-block.p5 .pillar-header .ph-num { background: #dc2626; }
+    .pillar-block.p5 .pillar-header h3 { color: #991b1b; }
+    .pillar-block.p5 { border-color: rgba(239,68,68,0.15); }
+
+    .pillar-block.p6 .pillar-header { background: rgba(16,185,129,0.06); border-bottom: 1px solid rgba(16,185,129,0.15); }
+    .pillar-block.p6 .pillar-header .ph-num { background: #059669; }
+    .pillar-block.p6 .pillar-header h3 { color: #065f46; }
+    .pillar-block.p6 { border-color: rgba(16,185,129,0.2); }
+
+    .pillar-block.p7 .pillar-header { background: linear-gradient(135deg, rgba(13,148,136,0.08) 0%, rgba(15,52,96,0.06) 100%); border-bottom: 1px solid rgba(13,148,136,0.15); }
+    .pillar-block.p7 .pillar-header .ph-num { background: linear-gradient(135deg, var(--teal), var(--navy)); }
+    .pillar-block.p7 .pillar-header h3 { color: #0d5c54; }
+    .pillar-block.p7 { border-color: rgba(13,148,136,0.2); }
+
+    /* Riba comparison */
+    .riba-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+    .riba-card { border-radius: 10px; padding: 1.25rem; }
+    .riba-card.bad { background: #fff5f5; border: 1.5px solid #fecaca; }
+    .riba-card.good { background: rgba(13,148,136,0.06); border: 1.5px solid rgba(13,148,136,0.2); }
+    .riba-card .rc-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .riba-card.bad .rc-label { color: #dc2626; }
+    .riba-card.good .rc-label { color: #065f46; }
+    .riba-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .riba-card ul li { font-size: 0.88rem; color: var(--body); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5; }
+    .riba-card.bad ul li::before { content: "❌"; font-size: 0.8rem; flex-shrink: 0; }
+    .riba-card.good ul li::before { content: "✅"; font-size: 0.8rem; flex-shrink: 0; }
+
+    /* Case study */
+    .case-box { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin: 1.25rem 0; }
+    .case-box .cb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .case-box p { font-size: 0.9rem; color: var(--body); line-height: 1.7; margin-bottom: 0.75rem; }
+    .case-box p:last-child { margin-bottom: 0; }
+    .case-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1rem 0; }
+    .case-option { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .case-option .co-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem; }
+    .case-option .co-val { font-size: 0.95rem; font-weight: 700; color: var(--near-black); margin-bottom: 0.2rem; }
+    .case-option .co-desc { font-size: 0.82rem; color: var(--body); }
+
+    /* Mudarabah scenarios */
+    .scenarios { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.25rem 0; }
+    .scenario { border-radius: 10px; padding: 1.25rem; }
+    .scenario.s1 { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+    .scenario.s2 { background: rgba(251,191,36,0.06); border: 1.5px solid rgba(251,191,36,0.25); }
+    .scenario.s3 { background: #fff5f5; border: 1.5px solid #fecaca; }
+    .scenario .sc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+    .scenario.s1 .sc-label { color: #16a34a; }
+    .scenario.s2 .sc-label { color: #92650a; }
+    .scenario.s3 .sc-label { color: #dc2626; }
+    .scenario ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .scenario ul li { font-size: 0.88rem; color: var(--body); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5; }
+    .scenario.s1 ul li::before { content: "✔"; color: #16a34a; font-weight: 800; flex-shrink: 0; }
+    .scenario.s2 ul li::before { content: "✔"; color: #92650a; font-weight: 800; flex-shrink: 0; }
+    .scenario.s3 ul li::before { content: "✔"; color: #dc2626; font-weight: 800; flex-shrink: 0; }
+
+    /* Cap table note */
+    .cap-table-note { background: rgba(15,52,96,0.04); border: 2px solid rgba(15,52,96,0.12); border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.25rem 0; }
+    .cap-table-note .ctn-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 0.75rem; }
+    .cap-table-note p { font-size: 0.9rem; color: var(--body); line-height: 1.75; margin-bottom: 0.5rem; }
+    .cap-table-note p:last-child { margin-bottom: 0; }
+
+    /* IPO structure */
+    .holdco-structure { background: var(--near-black); border-radius: 12px; padding: 1.75rem; margin: 1.25rem 0; color: white; }
+    .holdco-structure .hs-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .holdco-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .holdco-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.1rem; }
+    .holdco-card .hc-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .holdco-card.local .hc-tag { color: var(--gold); }
+    .holdco-card.global .hc-tag { color: #5eead4; }
+    .holdco-card .hc-who { font-size: 0.88rem; font-weight: 700; color: white; margin-bottom: 0.3rem; }
+    .holdco-card .hc-method { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+
+    /* Wakalah / Capallo */
+    .wakalah-capallo { background: linear-gradient(135deg, #0d3b2e 0%, #0f3460 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; color: white; }
+    .wakalah-capallo .wc-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #5eead4; margin-bottom: 1.25rem; }
+    .wakalah-capallo h4 { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 1rem; }
+    .wc-instruments { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .wc-instrument { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 0.9rem; }
+    .wc-instrument .wi-name { font-size: 0.8rem; font-weight: 700; color: var(--gold); margin-bottom: 0.25rem; }
+    .wc-instrument .wi-desc { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+    .wc-benefits { display: flex; flex-direction: column; gap: 0.5rem; }
+    .wc-benefit { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.55; }
+    .wc-benefit::before { content: "✓"; color: #5eead4; font-weight: 800; flex-shrink: 0; }
+
+    /* Pull quote */
+    .pull-quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem; border-left: 5px solid var(--teal); margin: 2.5rem 0; background: var(--teal-light); border-radius: 0 12px 12px 0; }
+
+    /* Aristotle quote */
+    .philosopher-quote { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin: 1.75rem 0; text-align: center; }
+    .philosopher-quote blockquote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.5; margin-bottom: 0.75rem; }
+    .philosopher-quote cite { font-size: 0.82rem; color: #9ca3af; font-style: normal; font-weight: 600; }
+
+    /* Takeaway */
+    .takeaway-box { background: linear-gradient(135deg, #0d3b2e 0%, var(--navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: #5eead4; }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: #5eead4; font-weight: 700; flex-shrink: 0; }
+
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-1px); }
+
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--teal); font-weight: 600; background: var(--teal-light); border-left-color: var(--teal); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, #0d3b2e 0%, var(--navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: #5eead4; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--teal); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .riba-compare, .case-options, .wc-instruments, .holdco-grid { grid-template-columns: 1fr; }
+      .history-timeline .ht-item { grid-template-columns: 80px 1fr; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Islamic Finance & Venture Investing</span>
+    </div>
+    <div class="topic-badge">☪️ Islamic Finance</div>
+    <h1>Venture Investing Through the Lens of Islamic Finance</h1>
+    <p class="subtitle">For investors who prefer value-aligned investment options. The seven pillars of Islamic finance applied to angel investing in Bangladesh's startup ecosystem.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        12 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Islamic Finance</span>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">
+      Interest-based finance has existed for 5,000 years. But so has the critique of it. Islamic finance isn't a modern innovation — it's a 14-century-old system built on a simple principle: fairness over certainty, and partnership over predatory terms.
+    </p>
+
+    <div class="quran-verse">
+      <div class="qv-arabic">وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا</div>
+      <div class="qv-translation">"Allah has permitted trade and forbidden interest (riba)."</div>
+      <div class="qv-source">— Surah Al-Baqarah, 2:275</div>
+    </div>
+
+    <div class="history-box">
+      <div class="hb-label">📜 A Brief History of Riba — 5,000 Years of the Same Problem</div>
+      <div class="history-timeline">
+        <div class="ht-item">
+          <span class="ht-era">~3000 BC Mesopotamia</span>
+          <span class="ht-text">Clay tablets show loans of silver and grain at 20–30% interest. Seen as normal commerce — but it often led to <strong>debt slavery</strong> for poor farmers who borrowed for seeds and lost their land when crops failed.</span>
+        </div>
+        <div class="ht-item">
+          <span class="ht-era">Pre-Islamic Arabia</span>
+          <span class="ht-text">Wealthy traders lent to the poor and <strong>doubled or tripled interest</strong> when borrowers couldn't repay. The system crushed the vulnerable and widened inequality — this was called Riba al-Jahiliyyah.</span>
+        </div>
+        <div class="ht-item">
+          <span class="ht-era">7th Century CE</span>
+          <span class="ht-text">Prophet Muhammad (PBUH) himself was a trader before prophethood — entering into <strong>Mudarabah partnerships</strong> where investors like Khadijah (RA) provided capital and he provided skill and integrity. This became the blueprint for Islamic investment.</span>
+        </div>
+        <div class="ht-item">
+          <span class="ht-era">Ancient Greece</span>
+          <span class="ht-text">Aristotle wrote: <em>"Money was intended to be used in exchange, not to increase at interest."</em> Even secular philosophy recognised the moral problem — 400 years before Islam codified its prohibition.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      If interest is the problem, Islamic finance is the solution — built on fairness over certainty and partnership over predatory terms.
+    </div>
+
+    <hr class="article-divider">
+
+    <h2 id="pillars">The Seven Pillars of Islamic Venture Investing</h2>
+
+    <!-- PILLAR 1 -->
+    <div class="pillar-block p1" id="p1">
+      <div class="pillar-header">
+        <div class="ph-num">1</div>
+        <div>
+          <div class="ph-arabic">الربا</div>
+          <h3>Riba-Free — No Interest, No Guaranteed Fixed Returns</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>In Islamic finance, you cannot earn money from money. You can only earn from <strong>value creation, real work, or shared risk.</strong> This doesn't limit returns — it redirects how they're generated.</p>
+        <div class="riba-compare">
+          <div class="riba-card bad">
+            <div class="rc-label">❌ Prohibited (Riba)</div>
+            <ul>
+              <li>Charging interest on a loan</li>
+              <li>Demanding guaranteed fixed returns</li>
+              <li>Earning without bearing any risk</li>
+            </ul>
+          </div>
+          <div class="riba-card good">
+            <div class="rc-label">✅ Permitted (Halal Returns)</div>
+            <ul>
+              <li>Profit share from business operations</li>
+              <li>Equity appreciation (Musharakah)</li>
+              <li>Performance-based ROI tied to real outcomes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-box">
+          <div class="cb-label">📦 Case Study — Dhaka Logistics Startup</div>
+          <p>A Dhaka-based logistics company serving e-commerce shops needs BDT 1 crore to expand coverage to Chattogram. The deal is structured with <strong>no interest and no fixed guaranteed return.</strong></p>
+          <div class="case-options">
+            <div class="case-option">
+              <div class="co-tag">Option A — Musharakah</div>
+              <div class="co-val">8% Equity</div>
+              <div class="co-desc">At an agreed valuation with help from investment professionals</div>
+            </div>
+            <div class="case-option">
+              <div class="co-tag">Option B — Mudarabah</div>
+              <div class="co-val">15% Profit Share</div>
+              <div class="co-desc">From Chattogram operations only — tied to real performance</div>
+            </div>
+          </div>
+          <p>Investor funds the expansion. Startup grows into the new region. Returns are tied to real outcomes — not a clock ticking on a loan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 2 -->
+    <div class="pillar-block p2" id="p2">
+      <div class="pillar-header">
+        <div class="ph-num">2</div>
+        <div>
+          <div class="ph-arabic">المضاربة</div>
+          <h3>Mudarabah — Profit-Sharing Partnership</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>The investor provides capital. The founder contributes effort and expertise. Profits are split on a mutually agreed ratio. Losses are borne only by the capital provider — unless the entrepreneur committed fraud or negligence.</p>
+        <div class="case-box">
+          <div class="cb-label">💻 Case Study — Sylhet SaaS Startup (BDT 2 Crore, 24-Month Term)</div>
+          <p>A Sylhet-based invoicing SaaS needs BDT 2 crore to hire world-class engineers. Deal structure: <strong>50/50 profit split, profits distributed quarterly, automatic exit after 24 months.</strong></p>
+          <div class="scenarios">
+            <div class="scenario s1">
+              <div class="sc-label">✅ Scenario 1 — Startup Made Money</div>
+              <ul>
+                <li>Investor receives all quarterly profit distributions</li>
+                <li>Full BDT 2 crore principal returned at month 24</li>
+                <li>Mudarabah ends cleanly — this is the normal case</li>
+              </ul>
+            </div>
+            <div class="scenario s2">
+              <div class="sc-label">⚠️ Scenario 2 — Legitimate Business Losses</div>
+              <ul>
+                <li>Net loss of BDT 1.5 crore — principal remaining: BDT 50 lakh</li>
+                <li>Investor receives only the remaining BDT 50 lakh</li>
+                <li>The BDT 1.5 crore loss is borne by the investor</li>
+                <li>Founder bears nothing — legitimate business risk was shared fairly</li>
+              </ul>
+            </div>
+            <div class="scenario s3">
+              <div class="sc-label">🚫 Scenario 3 — Founder Negligence or Fraud</div>
+              <ul>
+                <li>Funds used outside agreed business activity, or records not kept</li>
+                <li>Founder must return the full BDT 2 crore principal</li>
+                <li>Also liable for damages</li>
+                <li>Negligence invalidates the loss-sharing protection entirely</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin-top:0.75rem; font-size:0.88rem; font-style:italic;">At the end of the Mudarabah term, the investor receives the principal to the extent it still exists, plus any profit shares. Legitimate losses reduce the principal. Misuse of funds requires full restoration.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 3 -->
+    <div class="pillar-block p3" id="p3">
+      <div class="pillar-header">
+        <div class="ph-num">3</div>
+        <div>
+          <div class="ph-arabic">المشاركة</div>
+          <h3>Musharakah — Equity Partnership</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>This is the closest Islamic structure to conventional angel equity investment. The investor gets actual ownership shares in the company. If the company grows 3×, the investor exits at a 3× valuation — and it's halal because the return is based on fair market value, not a guaranteed rate.</p>
+        <div class="case-box">
+          <div class="cb-label">🏢 Typical Musharakah Structure</div>
+          <p>Investor puts in BDT 10 lakh. Receives <strong>5–10% non-dilutive ownership</strong> based on an agreed valuation. Exit options include acquisition, founder buyback, or dividends for the holding period.</p>
+        </div>
+        <div class="cap-table-note">
+          <div class="ctn-label">⚠️ Important: Musharakah Shares Should Stay Off the Cap Table</div>
+          <p>Musharakah is <strong>not company ownership by default</strong> — it is profit-and-loss sharing in a specific venture or project. Islamic finance globally (Malaysia, UAE, Bahrain) treats Musharakah as a contract-based partnership, not automatically corporate equity.</p>
+          <p>The ideal practice: <strong>Musharakah investors hold non-voting, non-dilutable, profit-linked certificates with buyback rights</strong> — sitting outside the formal cap table. VCs meanwhile hold preferred shares. This avoids structural conflict when global investors come in later.</p>
+        </div>
+        <div class="holdco-structure">
+          <div class="hs-label">🌐 The HoldCo Solution — Bangladesh Operations + Global Capital</div>
+          <div class="holdco-grid">
+            <div class="holdco-card local">
+              <div class="hc-tag">🇧🇩 Local Investors</div>
+              <div class="hc-who">Bangladeshi Angels</div>
+              <div class="hc-method">Invest via Musharakah / Shariah-compliant contracts into the Bangladesh operating entity</div>
+            </div>
+            <div class="holdco-card global">
+              <div class="hc-tag">🌍 Global Investors</div>
+              <div class="hc-who">Foreign VCs & Angels</div>
+              <div class="hc-method">Invest into the US/Singapore HoldCo parent — targeting Nasdaq, NYSE, LSE, or SGX exit</div>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.65); margin:0;">Bangladesh operations run as subsidiary. Both investor groups stay fully aligned without structural conflict. Local IPO serves local investors; global exchange serves global capital.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 4 -->
+    <div class="pillar-block p4" id="p4">
+      <div class="pillar-header">
+        <div class="ph-num">4</div>
+        <div>
+          <div class="ph-arabic">المرابحة</div>
+          <h3>Murabaha — Cost-Plus Asset Financing</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>The investor buys a physical asset and sells it to the startup at cost plus an agreed profit margin. The profit is halal because it is tied to an asset transaction — not interest on a loan.</p>
+        <div class="case-box">
+          <div class="cb-label">🏭 Case Study — Food Processing Company, Bogura</div>
+          <p>Needs 5 industrial machines at BDT 25 lakh each. The investor buys the machines at market price and sells them to the startup at <strong>BDT 25 lakh + BDT 5 lakh agreed profit = BDT 30 lakh total.</strong> Startup repays in 12 monthly instalments. Profit is halal because it is tied to asset resale, not a loan with a ticking interest clock.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 5 -->
+    <div class="pillar-block p5" id="p5">
+      <div class="pillar-header">
+        <div class="ph-num">5</div>
+        <div>
+          <div class="ph-arabic">الإجارة</div>
+          <h3>Ijara — Lease / Rent-to-Own</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>The investor purchases an asset and leases it to the startup for a monthly rental fee. After the lease period, the startup can purchase the asset at a pre-agreed residual value. Investor earns recurring halal rental income. Startup scales without large upfront capital expenditure.</p>
+        <div class="case-box">
+          <div class="cb-label">🎥 Case Study — Media Production Startup</div>
+          <p>Needs cameras and lighting equipment worth BDT 12 lakh. Investor buys the equipment. Startup pays <strong>BDT 60,000/month rent.</strong> After 24 months, startup has the option to purchase the equipment at a predetermined residual value. Clean, halal, recurring income for the investor throughout the lease period.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 6 -->
+    <div class="pillar-block p6" id="p6">
+      <div class="pillar-header">
+        <div class="ph-num">6</div>
+        <div>
+          <div class="ph-arabic">الصكوك</div>
+          <h3>Sukuk — Islamic Bonds for Mature Companies</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>Sukuk are asset-backed Islamic investment certificates — not debt instruments. Investors purchase units representing ownership in a real, underlying asset and receive halal returns in the form of rental income or profit shares from that asset's operation.</p>
+        <div class="case-box">
+          <div class="cb-label">🚛 Case Study — Chattogram Logistics Company (BDT 15 Crore Expansion)</div>
+          <p>A logistics company with 100 trucks needs BDT 15 crore to expand into Dhaka. Issues Sukuk <strong>backed by its truck fleet as the underlying asset.</strong> Investors buy Sukuk units and receive either Ijara-based rental income or Mudarabah-based profit share throughout the 5–7 year term. On maturity, the issuer buys back the investors' share of the asset — returning principal along with all accumulated distributions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR 7 / WAKALAH -->
+    <div class="pillar-block p7" id="p7">
+      <div class="pillar-header">
+        <div class="ph-num">7</div>
+        <div>
+          <div class="ph-arabic">الوكالة</div>
+          <h3>Wakalah — Agency-Based Investment</h3>
+        </div>
+      </div>
+      <div class="pillar-body">
+        <p>Busy professionals who want halal investments often don't have the time, expertise, or access to find quality founders, evaluate real traction, verify Shariah compliance, negotiate fair terms, or structure exit pathways. This is why most halal investors end up with low-yield FDRs instead of high-growth businesses.</p>
+        <div class="wakalah-capallo">
+          <div class="wc-label">🏛️ How Capallo Implements Wakalah</div>
+          <h4>Investors appoint Capallo as their authorised investment agent</h4>
+          <div class="wc-instruments">
+            <div class="wc-instrument">
+              <div class="wi-name">Mudarabah</div>
+              <div class="wi-desc">Profit-sharing partnerships with verified founders</div>
+            </div>
+            <div class="wc-instrument">
+              <div class="wi-name">Musharakah</div>
+              <div class="wi-desc">Co-ownership equity in vetted high-growth startups</div>
+            </div>
+            <div class="wc-instrument">
+              <div class="wi-name">Murabaha</div>
+              <div class="wi-desc">Cost-plus asset financing for trade and expansion</div>
+            </div>
+            <div class="wc-instrument">
+              <div class="wi-name">Ijara</div>
+              <div class="wi-desc">Structured asset leasing with stable recurring returns</div>
+            </div>
+          </div>
+          <div class="wc-benefits">
+            <div class="wc-benefit">Stay fully halal — every deal verified for Shariah compliance before it reaches you</div>
+            <div class="wc-benefit">Outsource complexity to experts — due diligence, term negotiation, legal structuring handled by Capallo</div>
+            <div class="wc-benefit">Access high-potential startups and SMEs that match your values and return targets</div>
+            <div class="wc-benefit">Get structured exit pathways — buybacks, dividends, and partial liquidity built into every deal</div>
+            <div class="wc-benefit">Invest with trust, transparency, and accountability — and protection from fraudulent founders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Islamic finance is a 14-century-old system built on a simple principle: earn from value creation and shared risk — not from money sitting idle.</li>
+        <li>Riba (interest) is prohibited. Halal returns come from profit share, equity appreciation, asset resale, or rental income.</li>
+        <li>Mudarabah: investor provides capital, founder provides skill. Profits shared by agreement. Losses borne by investor unless the founder committed fraud or negligence.</li>
+        <li>Musharakah is the closest Islamic structure to angel equity. Returns are based on fair market value at exit — not a guaranteed rate.</li>
+        <li>Musharakah shares should sit outside the formal cap table to avoid structural conflict with future VC investors.</li>
+        <li>The HoldCo structure (US/Singapore parent + Bangladesh subsidiary) lets local Musharakah investors and global VC investors coexist without conflict.</li>
+        <li>Murabaha, Ijara, and Sukuk offer structured halal returns tied to physical assets — ideal for non-equity investment scenarios.</li>
+        <li>Wakalah lets halal investors delegate the complexity of finding, vetting, and structuring deals to an authorised agent — which is exactly what Capallo does.</li>
+      </ul>
+    </div>
+
+    <!-- PART NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-11.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous Article</span>
+        <span class="nav-title">Venture Math 2.0: What It Takes to Return a Fund</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Browse All Articles →</span>
+        <span class="nav-title">More venture investing insights</span>
+      </a>
+    </div>
+
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-12.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Venture investing through the lens of Islamic finance — 7 halal investment structures explained: https://blog.capallo.co/posts/traction-based-angel-investing-part-12.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Halal angel investing — the 7 Islamic finance structures that let you invest in startups without riba&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-12.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <div class="coffee-cta">
+      <p>If this helped you understand how to invest in high-growth startups while staying true to your values, consider supporting our work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#pillars">The 7 Pillars</a></li>
+        <li><a href="#p1">1 · Riba-Free</a></li>
+        <li><a href="#p2">2 · Mudarabah</a></li>
+        <li><a href="#p3">3 · Musharakah</a></li>
+        <li><a href="#p4">4 · Murabaha</a></li>
+        <li><a href="#p5">5 · Ijara</a></li>
+        <li><a href="#p6">6 · Sukuk</a></li>
+        <li><a href="#p7">7 · Wakalah</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Invest the Halal Way</h4>
+      <p>Capallo structures Shariah-compliant deals in vetted, high-growth startups — so you never have to choose between your values and your returns.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--teal);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial or Shariah advice. Consult a qualified Islamic finance scholar for rulings specific to your circumstances. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--teal); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('h2[id], .pillar-block[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
