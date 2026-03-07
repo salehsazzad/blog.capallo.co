@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Venture Math to Simplify Angel Investing — Capallo Blog</title>
+  <meta name="description" content="Most startups don't get rejected because the idea is bad. They get rejected because the venture math doesn't add up. Here's how angels actually think.">
+  <meta name="keywords" content="venture math Bangladesh, angel investing math, IRR startup, 100x returns venture, VC fund math Bangladesh, startup valuation math">
+  <meta property="og:title" content="Master Venture Math to Simplify Angel Investing — Capallo Blog">
+  <meta property="og:description" content="If you understand venture math, you'll see why some startups get funded and others get ghosted.">
+  <meta property="og:image" content="https://i.imgur.com/ZORm1WL.png">
+  <meta property="og:url" content="https://blog.capallo.co/posts/traction-based-angel-investing-part-10.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.capallo.co/posts/traction-based-angel-investing-part-10.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230f3460'/><text x='50' y='70' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Inter,system-ui,sans-serif'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0f3460; --dark-navy: #16213e; --near-black: #1a1a2e;
+      --gold: #fbbf24; --green: #10b981; --red: #ef4444;
+      --body: #4a5568; --light-bg: #f7fafc; --border: #e5e7eb; --white: #ffffff;
+    }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--near-black); line-height: 1.6; }
+
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+    .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .nav-logo img { height: 38px; }
+    .nav-blog-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); border-left: 2px solid var(--border); padding-left: 0.75rem; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--body); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-secondary { padding: 0.65rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; background: white; color: var(--navy); border: 2px solid var(--navy); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: white; }
+    .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--navy); cursor: pointer; padding: 0.5rem; }
+
+    .article-hero { padding: 130px 3rem 60px; background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); color: white; }
+    .article-hero-inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .breadcrumb a:hover { color: white; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .topic-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .article-hero .subtitle { font-size: 1.15rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2rem; max-width: 700px; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+    .read-time-badge { background: rgba(251,191,36,0.2); color: var(--gold); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+    .article-layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4rem 3rem; align-items: start; }
+    .article-body { min-width: 0; }
+    .article-body h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.9rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+    .article-body p { color: var(--body); font-size: 1.02rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .article-body strong { color: var(--near-black); font-weight: 600; }
+    .article-divider { border: none; border-top: 2px solid var(--border); margin: 2.5rem 0; }
+    .article-lead { font-size: 1.15rem; color: #2d3748; line-height: 1.85; border-left: 4px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+
+    /* Pitch vs reaction box */
+    .pitch-reality { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 2rem 0; }
+    .pr-card { border-radius: 12px; padding: 1.75rem; }
+    .pr-card.pitch { background: rgba(15,52,96,0.05); border: 2px solid rgba(15,52,96,0.15); }
+    .pr-card.reality { background: #fff5f5; border: 2px solid #fecaca; }
+    .pr-card .pr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .pr-card.pitch .pr-label { color: var(--navy); }
+    .pr-card.reality .pr-label { color: #dc2626; }
+    .pr-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pr-card.pitch h4 { color: var(--navy); }
+    .pr-card.reality h4 { color: #dc2626; }
+    .pr-card p { font-size: 0.9rem; color: var(--body); line-height: 1.65; margin: 0; font-style: italic; }
+
+    /* Myth vs reality */
+    .myth-box { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; color: white; }
+    .myth-box .mb-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .myth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+    .myth-col { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.25rem; }
+    .myth-col .mc-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .myth-col.myth .mc-label { color: #f87171; }
+    .myth-col.truth .mc-label { color: var(--gold); }
+    .myth-col p { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.65; margin: 0; }
+
+    /* Angel worldview counter */
+    .worldview-box { background: var(--light-bg); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 2.5rem; margin: 2rem 0; }
+    .worldview-box .wv-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.5rem; }
+    .wv-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .wv-stat { text-align: center; padding: 1.25rem; background: white; border: 1px solid var(--border); border-radius: 10px; }
+    .wv-stat .ws-num { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .wv-stat:nth-child(1) .ws-num { color: var(--red); }
+    .wv-stat:nth-child(2) .ws-num { color: var(--navy); }
+    .wv-stat:nth-child(3) .ws-num { color: var(--gold); }
+    .wv-stat .ws-label { font-size: 0.82rem; color: var(--body); line-height: 1.4; }
+    .wv-question { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .wq-card { padding: 1rem 1.25rem; border-radius: 8px; }
+    .wq-card.wrong { background: #fff5f5; border: 1.5px solid #fecaca; }
+    .wq-card.right { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+    .wq-card .wq-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .wq-card.wrong .wq-tag { color: #dc2626; }
+    .wq-card.right .wq-tag { color: #16a34a; }
+    .wq-card p { font-size: 0.9rem; color: var(--body); margin: 0; line-height: 1.6; font-style: italic; }
+
+    /* Rocket vs turtle */
+    .rocket-turtle { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.75rem 0; }
+    .rt-card { border-radius: 12px; padding: 1.5rem; text-align: center; }
+    .rt-card.rocket { background: rgba(15,52,96,0.05); border: 2px solid rgba(15,52,96,0.18); }
+    .rt-card.turtle { background: #fff5f5; border: 2px solid #fecaca; }
+    .rt-card .rt-icon { font-size: 2.5rem; margin-bottom: 0.6rem; }
+    .rt-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .rt-card.rocket h4 { color: var(--navy); }
+    .rt-card.turtle h4 { color: #dc2626; }
+    .rt-card p { font-size: 0.85rem; color: var(--body); line-height: 1.6; margin: 0; }
+
+    /* VC timeline */
+    .vc-timeline { margin: 1.75rem 0; display: flex; flex-direction: column; gap: 0; }
+    .vt-row { display: grid; grid-template-columns: 130px 1fr; gap: 1rem; align-items: stretch; }
+    .vt-row .vt-period { font-size: 0.8rem; font-weight: 700; color: white; padding: 0.75rem 0.75rem; border-radius: 6px 0 0 6px; text-align: center; line-height: 1.3; display: flex; align-items: center; justify-content: center; }
+    .vt-row:nth-child(1) .vt-period { background: var(--navy); border-radius: 6px 0 0 0; }
+    .vt-row:nth-child(2) .vt-period { background: #1e5ba8; }
+    .vt-row:nth-child(3) .vt-period { background: var(--red); border-radius: 0 0 0 6px; }
+    .vt-row .vt-desc { font-size: 0.9rem; color: var(--body); padding: 0.75rem 1rem; background: var(--light-bg); border: 1px solid var(--border); line-height: 1.6; display: flex; align-items: center; }
+    .vt-row:nth-child(1) .vt-desc { border-radius: 0 6px 0 0; border-bottom: none; }
+    .vt-row:nth-child(2) .vt-desc { border-radius: 0; border-bottom: none; }
+    .vt-row:nth-child(3) .vt-desc { border-radius: 0 0 6px 0; }
+    .vt-row .vt-desc strong { color: var(--near-black); }
+
+    /* $50M rule */
+    .revenue-rule { background: rgba(251,191,36,0.06); border: 2px solid rgba(251,191,36,0.3); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .revenue-rule .rr-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #92650a; margin-bottom: 1rem; }
+    .revenue-rule .rr-number { font-family: 'Playfair Display', Georgia, serif; font-size: 3.5rem; font-weight: 800; color: #92650a; line-height: 1; margin-bottom: 0.5rem; }
+    .revenue-rule p { font-size: 0.95rem; color: var(--body); line-height: 1.75; margin-bottom: 0.75rem; }
+    .revenue-rule p:last-child { margin-bottom: 0; }
+    .exit-examples { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
+    .exit-ex { background: white; border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.9rem 1rem; }
+    .exit-ex .ee-co { font-size: 0.78rem; font-weight: 700; color: #92650a; margin-bottom: 0.2rem; }
+    .exit-ex .ee-desc { font-size: 0.83rem; color: var(--body); }
+
+    /* Math breakdown */
+    .math-breakdown { background: var(--near-black); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; color: white; }
+    .math-breakdown .math-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .math-steps { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .math-step { display: grid; grid-template-columns: 36px 1fr auto; gap: 0.75rem; align-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.9rem 1rem; }
+    .math-step .ms-num { width: 28px; height: 28px; background: var(--gold); color: var(--near-black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 800; flex-shrink: 0; }
+    .math-step .ms-text { font-size: 0.9rem; color: rgba(255,255,255,0.88); line-height: 1.5; }
+    .math-step .ms-result { font-size: 1rem; font-weight: 800; color: var(--gold); white-space: nowrap; }
+    .math-final { background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3); border-radius: 10px; padding: 1.25rem; text-align: center; }
+    .math-final .mf-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .math-final .mf-number { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; font-weight: 800; color: white; }
+    .math-final .mf-sub { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-top: 0.25rem; }
+
+    /* IRR explainer */
+    .irr-explainer { background: var(--light-bg); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .irr-explainer .ie-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .irr-scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .irr-scenario { border-radius: 10px; padding: 1.25rem; }
+    .irr-scenario.a { background: #f0fdf4; border: 2px solid #bbf7d0; }
+    .irr-scenario.b { background: #fff5f5; border: 2px solid #fecaca; }
+    .irr-scenario .is-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .irr-scenario.a .is-label { color: #16a34a; }
+    .irr-scenario.b .is-label { color: #dc2626; }
+    .irr-scenario .is-return { font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .irr-scenario.a .is-return { color: #16a34a; }
+    .irr-scenario.b .is-return { color: #dc2626; }
+    .irr-scenario p { font-size: 0.85rem; color: var(--body); line-height: 1.6; margin: 0; }
+    .irr-lesson { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1rem; font-size: 0.92rem; color: var(--near-black); line-height: 1.65; font-weight: 500; text-align: center; }
+
+    /* Exit comparison */
+    .exit-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.75rem 0; }
+    .ec-card { border-radius: 12px; padding: 1.5rem; }
+    .ec-card.pe { background: rgba(251,191,36,0.06); border: 2px solid rgba(251,191,36,0.25); }
+    .ec-card.strategic { background: rgba(15,52,96,0.05); border: 2px solid rgba(15,52,96,0.18); }
+    .ec-card .ec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .ec-card.pe .ec-label { color: #92650a; }
+    .ec-card.strategic .ec-label { color: var(--navy); }
+    .ec-card .ec-multiple { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .ec-card.pe .ec-multiple { color: #92650a; }
+    .ec-card.strategic .ec-multiple { color: var(--navy); }
+    .ec-card p { font-size: 0.87rem; color: var(--body); line-height: 1.6; margin: 0; }
+
+    /* BD local play */
+    .bd-play { background: rgba(15,52,96,0.04); border: 2px solid rgba(15,52,96,0.12); border-radius: 14px; padding: 2rem 2.5rem; margin: 1.75rem 0; }
+    .bd-play .bp-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+    .bd-play p { font-size: 0.95rem; color: var(--body); line-height: 1.8; margin-bottom: 0.75rem; }
+    .bd-strategies { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+    .bd-strategy { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 1rem; background: white; border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; color: var(--body); line-height: 1.6; }
+    .bd-strategy::before { content: "→"; color: var(--navy); font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+    .bd-strategy strong { color: var(--near-black); }
+
+    /* The real question */
+    .real-question { background: linear-gradient(135deg, var(--near-black) 0%, #2d3748 100%); border-radius: 14px; padding: 2.5rem; margin: 2.5rem 0; color: white; }
+    .real-question .rq-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .real-question p { color: rgba(255,255,255,0.88); font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.75rem; }
+    .real-question .rq-question { background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3); border-radius: 10px; padding: 1.25rem 1.5rem; font-size: 0.95rem; color: white; line-height: 1.8; font-style: italic; margin: 1.25rem 0; }
+    .real-question p.rq-conclusion { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0; }
+
+    /* Pull quote */
+    .pull-quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); line-height: 1.4; padding: 2rem 2rem 2rem 2.5rem; border-left: 5px solid var(--gold); margin: 2.5rem 0; background: rgba(15,52,96,0.03); border-radius: 0 12px 12px 0; }
+
+    /* Takeaway */
+    .takeaway-box { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 14px; padding: 2.5rem; margin: 3rem 0; color: white; }
+    .takeaway-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--gold); }
+    .takeaway-box ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .takeaway-box ul li { font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; display: flex; align-items: flex-start; gap: 0.6rem; }
+    .takeaway-box ul li::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    .part-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }
+    .part-nav-card { border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; text-decoration: none; color: inherit; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.4rem; }
+    .part-nav-card:hover { border-color: var(--navy); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .part-nav-card .nav-direction { font-size: 0.75rem; font-weight: 700; color: #9ca3af; letter-spacing: 0.5px; text-transform: uppercase; }
+    .part-nav-card .nav-title { font-size: 0.93rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .part-nav-card.prev { border-color: var(--navy); background: rgba(15,52,96,0.02); }
+
+    .share-bar { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2.5rem 0; flex-wrap: wrap; }
+    .share-label { font-size: 0.85rem; font-weight: 700; color: var(--near-black); margin-right: 0.5rem; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border); color: var(--body); }
+    .share-btn:hover { border-color: var(--navy); color: var(--navy); transform: translateY(-1px); }
+
+    .coffee-cta { background: var(--light-bg); border-radius: 12px; padding: 2rem; text-align: center; margin: 3rem 0; border: 1px solid var(--border); }
+    .coffee-cta p { color: var(--body); font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.7; }
+    .coffee-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: #FFDD00; color: #000; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 2px solid #e6c800; }
+    .coffee-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,221,0,0.4); }
+
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 1.25rem; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc-list li a { color: var(--body); text-decoration: none; font-size: 0.88rem; line-height: 1.5; display: block; padding: 0.4rem 0.6rem; border-radius: 5px; transition: all 0.15s; border-left: 2px solid transparent; }
+    .toc-list li a:hover, .toc-list li a.active { color: var(--navy); font-weight: 600; background: white; border-left-color: var(--navy); padding-left: 0.9rem; }
+    .sidebar-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-navy) 100%); border-radius: 12px; padding: 1.75rem; text-align: center; margin-bottom: 1.5rem; }
+    .sidebar-cta h4 { color: var(--gold); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .sidebar-cta p { color: rgba(255,255,255,0.82); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .sidebar-cta a { display: block; background: white; color: var(--navy); padding: 0.75rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.2s; margin-bottom: 0.75rem; }
+    .sidebar-cta a:hover { background: var(--gold); }
+    .sidebar-cta a.outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); }
+    .sidebar-cta a.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    .back-bar { max-width: 1200px; margin: 0 auto; padding: 2rem 3rem 0; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--body); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .back-link:hover { color: var(--navy); }
+    .back-link svg { transition: transform 0.2s; }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand-row img { height: 32px; }
+    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom a:hover { color: white; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 70px; left: 0; width: 100%; background: white; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); z-index: 999; }
+      .mobile-menu-btn { display: block; }
+      .article-hero { padding: 110px 1.5rem 50px; }
+      .article-hero h1 { font-size: 2.1rem; }
+      .article-layout { padding: 2.5rem 1.5rem; }
+      .pitch-reality, .myth-row, .wv-question, .rocket-turtle,
+      .irr-scenarios, .exit-comparison, .ec-card, .exit-examples { grid-template-columns: 1fr; }
+      .wv-stats { grid-template-columns: repeat(3, 1fr); }
+      .math-step { grid-template-columns: 36px 1fr; }
+      .math-step .ms-result { display: none; }
+      .part-nav { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+      .back-bar { padding: 1.5rem 1.5rem 0; }
+      footer { padding: 40px 1.5rem 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-container">
+    <a href="https://capallo.co" class="nav-logo">
+      <img src="https://i.imgur.com/gygdJtU.png" alt="Capallo">
+      <span class="nav-blog-label">Blog</span>
+    </a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="https://blog.capallo.co">All Articles</a>
+      <a href="https://capallo.co/#investors">For Investors</a>
+      <a href="https://capallo.co/#founders">For Founders</a>
+      <a href="https://capallo.co/#about">About</a>
+    </div>
+    <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" class="btn-secondary" target="_blank">Schedule Call</a>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb">
+      <a href="https://blog.capallo.co">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Master Venture Math</span>
+    </div>
+    <div class="topic-badge">🧮 Venture Math</div>
+    <h1>Master Venture Math to Simplify Angel Investing</h1>
+    <p class="subtitle">Most startups don't get rejected because their idea is bad. They get rejected because their venture math doesn't add up. Here's how angels actually think — and why.</p>
+    <div class="article-meta">
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        9 min read
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        March 2026
+      </div>
+      <div class="meta-item">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Capallo Team
+      </div>
+      <span class="read-time-badge">Venture Math</span>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="https://blog.capallo.co" class="back-link">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to all articles
+  </a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p class="article-lead">
+      A founder walks in with $10M in revenue and $2M in profit. Sounds great. But the angel in the room is already mentally moving on. If you understand venture math, you'll instantly see why — and you'll start evaluating startups the way the best investors do.
+    </p>
+
+    <div class="pitch-reality">
+      <div class="pr-card pitch">
+        <div class="pr-label">📣 What Founders Pitch</div>
+        <h4>The Numbers Look Great</h4>
+        <p>"We're generating $10M in revenue with $2M in net profit. Solid fundamentals, growing steadily."</p>
+      </div>
+      <div class="pr-card reality">
+        <div class="pr-label">🧠 What Angels Silently Think</div>
+        <h4>Good Business… Wrong Math</h4>
+        <p>"Profitable but growing at 20% per year. That's accounting math, not venture math. This can't return my fund."</p>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- MYTH OF PROFITABILITY -->
+    <h2 id="myth">The Myth of Profitability</h2>
+
+    <div class="myth-box">
+      <div class="mb-label">🔥 Accounting Math vs Venture Math</div>
+      <p style="color:rgba(255,255,255,0.82); font-size:0.95rem; line-height:1.75; margin-bottom:1.25rem;">You might think a startup making $5M in annual profit is every investor's dream. In accounting, it is. In venture math, it's a polite "no thank you."</p>
+      <div class="myth-row">
+        <div class="myth-col myth">
+          <div class="mc-label">❌ The Myth</div>
+          <p>Profit means success. Investors love profitable companies. A $5M profit startup is fundable.</p>
+        </div>
+        <div class="myth-col truth">
+          <div class="mc-label">✓ The Truth</div>
+          <p>In venture, profits don't excite investors — growth does. Every dollar should be reinvested into scaling, not returned as earnings.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>A startup isn't meant to give an investor a comfortable living. It's meant to deliver <strong>legendary returns that no other asset class in the world can match.</strong> That means aggressive reinvestment, explosive growth, and an exit that makes the portfolio math work. Profit-taking at the early stage kills the very thing investors came for.</p>
+
+    <hr class="article-divider">
+
+    <!-- ANGEL WORLDVIEW -->
+    <h2 id="worldview">How Angels and VCs Actually Think</h2>
+
+    <div class="worldview-box">
+      <div class="wv-label">👁️ The Angel Investor's Worldview</div>
+      <div class="wv-stats">
+        <div class="wv-stat">
+          <div class="ws-num">9/10</div>
+          <div class="ws-label">Startups they back will fail or return nothing</div>
+        </div>
+        <div class="wv-stat">
+          <div class="ws-num">1/10</div>
+          <div class="ws-label">Must return the entire fund plus profit</div>
+        </div>
+        <div class="wv-stat">
+          <div class="ws-num">100×</div>
+          <div class="ws-label">Minimum potential needed just to stay in the game</div>
+        </div>
+      </div>
+      <div class="wv-question">
+        <div class="wq-card wrong">
+          <div class="wq-tag">❌ Wrong Question</div>
+          <p>"Can this startup survive?"</p>
+        </div>
+        <div class="wq-card right">
+          <div class="wq-tag">✅ Right Question</div>
+          <p>"Can this startup 100×?"</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This single worldview explains almost every funding decision that seems irrational from the outside. A profitable, growing, sustainable business can still be a hard pass — because it simply cannot return 100× at scale. That's not a flaw in the investor's thinking. It's the math of the game they're playing.</p>
+
+    <hr class="article-divider">
+
+    <!-- ROCKET NOT TURTLE -->
+    <h2 id="rocket">VCs Expect a Rocket, Not a Turtle</h2>
+
+    <p>Venture capital funds have a fixed lifecycle — typically 10 years. That clock creates hard constraints on which startups are fundable, regardless of quality.</p>
+
+    <div class="vc-timeline">
+      <div class="vt-row">
+        <span class="vt-period">Years 1–3</span>
+        <span class="vt-desc"><strong>Investment period.</strong> The fund deploys capital into a portfolio of startups. Cheques get written, term sheets get signed.</span>
+      </div>
+      <div class="vt-row">
+        <span class="vt-period">Years 4–9</span>
+        <span class="vt-desc"><strong>Follow-on & waiting.</strong> Double down on winners, support the portfolio, and wait for exits to materialise.</span>
+      </div>
+      <div class="vt-row">
+        <span class="vt-period">Year 10</span>
+        <span class="vt-desc"><strong>Fund must close.</strong> Capital needs to be returned to LPs. If a startup hasn't exited by now, it's a problem — not a "wait and see."</span>
+      </div>
+    </div>
+
+    <div class="rocket-turtle">
+      <div class="rt-card rocket">
+        <div class="rt-icon">🚀</div>
+        <h4>The Rocket</h4>
+        <p>Grows fast enough to exit within 5–7 years at a valuation that returns the fund. This is the only type of startup venture math is designed for.</p>
+      </div>
+      <div class="rt-card turtle">
+        <div class="rt-icon">🐢</div>
+        <h4>The Turtle</h4>
+        <p>Great business. 12 years to reach meaningful scale. Already too late for the fund. Not a bad company — just the wrong vehicle for venture capital.</p>
+      </div>
+    </div>
+
+    <p>If a startup can't fit into this math, VC fund cheques and angel money simply aren't designed for them. That's not a judgment — it's just the structure of the instrument. Not every great business is a venture-fundable business.</p>
+
+    <hr class="article-divider">
+
+    <!-- $50M RULE -->
+    <h2 id="revenue-rule">The $50M Revenue Rule</h2>
+
+    <div class="revenue-rule">
+      <div class="rr-label">🎯 The Strategic Exit Threshold</div>
+      <div class="rr-number">$50M+</div>
+      <p>Big acquisitions don't happen for small players. Strategic buyers — the ones paying 5–10× revenue — only show up once a startup represents a real threat or a real opportunity at scale.</p>
+      <div class="exit-examples">
+        <div class="exit-ex">
+          <div class="ee-co">Coca-Cola</div>
+          <div class="ee-desc">Won't acquire a beverage brand unless it's threatening their market share at scale</div>
+        </div>
+        <div class="exit-ex">
+          <div class="ee-co">Oracle</div>
+          <div class="ee-desc">Won't buy a SaaS product unless customers are actively switching to it from Oracle</div>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem; margin-bottom:0;">$50M+ annual revenue is the number investors reverse-engineer from when sizing up potential exit multiples. Below that threshold, you're mostly looking at PE buyouts at 3–4× EBITDA — not venture returns.</p>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- THE MATH -->
+    <h2 id="math">The Math Behind the Madness</h2>
+
+    <p>Here's exactly how a VC fund models a single investment — and why the numbers end up where they do.</p>
+
+    <div class="math-breakdown">
+      <div class="math-label">📐 Working Through the VC Math</div>
+      <div class="math-steps">
+        <div class="math-step">
+          <div class="ms-num">1</div>
+          <div class="ms-text">VC invests at a <strong>$10M valuation</strong>. Fund requires <strong>20% IRR over 7 years</strong>.</div>
+          <div class="ms-result">Entry: $10M</div>
+        </div>
+        <div class="math-step">
+          <div class="ms-num">2</div>
+          <div class="ms-text">To hit 20% IRR over 7 years, a single deal needs to return <strong>3.6× the investment</strong>.</div>
+          <div class="ms-result">Target: 3.6×</div>
+        </div>
+        <div class="math-step">
+          <div class="ms-num">3</div>
+          <div class="ms-text">But 9 out of 10 fail. So the <strong>one winner must cover the whole portfolio</strong> — meaning 3.6× × 10 = 36× needed from the winner.</div>
+          <div class="ms-result">Required: 36×</div>
+        </div>
+        <div class="math-step">
+          <div class="ms-num">4</div>
+          <div class="ms-text">Now add <strong>dilution from 2 more funding rounds</strong> — roughly 55% of original stake remains at exit.</div>
+          <div class="ms-result">Stake: ~55%</div>
+        </div>
+      </div>
+      <div class="math-final">
+        <div class="mf-label">The winner must exit at</div>
+        <div class="mf-number">~80× the entry valuation</div>
+        <div class="mf-sub">At $10M entry → the exit must be $800M or more within 7 years. This is why investors chase 100× outcomes.</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- IRR EXPLAINER -->
+    <h2 id="irr">IRR — Why Time Is Capital</h2>
+
+    <div class="irr-explainer">
+      <div class="ie-label">⏱️ The Same Return, Very Different Results</div>
+      <div class="irr-scenarios">
+        <div class="irr-scenario a">
+          <div class="is-label">✅ Scenario A — Fast Exit</div>
+          <div class="is-return">IRR ≈ 41%</div>
+          <p>Invest $100,000. Get $200,000 back in <strong>2 years.</strong> That's a 2× return — but at 41% per year because of the speed.</p>
+        </div>
+        <div class="irr-scenario b">
+          <div class="is-label">⚠️ Scenario B — Slow Exit</div>
+          <div class="is-return">IRR ≈ 15%</div>
+          <p>Invest $100,000. Get $200,000 back in <strong>5 years.</strong> Still 2× overall — but only 15% per year. Time eroded the return.</p>
+        </div>
+      </div>
+      <div class="irr-lesson">Both scenarios doubled your money. But the speed of return dramatically changes how good the deal actually is. <strong>Time is capital in venture investing.</strong></div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- EXIT TYPES -->
+    <h2 id="exits">The Illusion of Small Exits</h2>
+
+    <p>Not all exits are venture exits. Understanding the difference between PE buyouts and strategic acquisitions is the difference between feeling like you won and actually winning.</p>
+
+    <div class="exit-comparison">
+      <div class="ec-card pe">
+        <div class="ec-label">🏦 Private Equity Buyout</div>
+        <div class="ec-multiple">3–4× EBITDA</div>
+        <p>A win for founders. A partial win for early employees. But at typical startup scales — a loss for angel investors who needed 80× to make their portfolio math work.</p>
+      </div>
+      <div class="ec-card strategic">
+        <div class="ec-label">🎯 Strategic Acquisition</div>
+        <div class="ec-multiple">5–10× Revenue</div>
+        <p>Only this justifies venture risk. Strategic buyers pay for the threat the company represents — not just the current cash flows. This is the exit venture math is built around.</p>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      Venture math rewards only those that can grow fast, huge, and loud. A $20M revenue startup exiting at 4× EBITDA is a founder win — but an angel loss.
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- BD LOCAL PLAY -->
+    <h2 id="bd-play">Playing the Game With Local Wisdom — Bangladesh</h2>
+
+    <div class="bd-play">
+      <div class="bp-label">🇧🇩 Bangladesh Context</div>
+      <p>Private capital flow in Bangladesh is still in its early stages — and that's exactly why now is one of the best times to be an angel here. Early movers set the terms. The ecosystem is being built in real time.</p>
+      <p>But playing Silicon Valley's game in Bangladesh is a mistake. The $50M–$100M exit fantasy doesn't reflect local market realities — yet. Smart local angels play a different game.</p>
+      <div class="bd-strategies">
+        <div class="bd-strategy"><strong>Find founders with a clear roadmap to scale beyond borders.</strong> The exit is more likely to come from a regional or global acquirer than a local one.</div>
+        <div class="bd-strategy"><strong>Structure deals for partial liquidity.</strong> Buybacks and dividend structures can return capital to early angels without waiting for a full acquisition — especially important in a market with limited exit infrastructure.</div>
+        <div class="bd-strategy"><strong>Bet on the category, not just the company.</strong> In an emerging market, being early to the right sector can matter more than picking the perfect team.</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <!-- THE REAL QUESTION -->
+    <div class="real-question">
+      <div class="rq-label">💭 The Question Every Angel Must Ask Before Investing</div>
+      <p>Next time you come across a startup with what seems like an inflated valuation, don't just ask "why is the valuation so high?" Ask the full venture math question:</p>
+      <div class="rq-question">
+        "If only 1 of my 10 investments succeeds, and I need a portfolio return of 20% IRR, my one success must return 36× what I paid. If the valuation was $10M at entry, I need that one success to exit at $360M or more within 7 years. Can this founder make that happen?"
+      </div>
+      <p class="rq-conclusion">If the answer is no — that's fine. No hard feelings. Not every great startup is supposed to fit venture math. But now you're evaluating it correctly. And <strong>that's the edge most investors never develop.</strong></p>
+    </div>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>Startups get rejected not because ideas are bad — but because the venture math doesn't add up for that specific fund.</li>
+        <li>Venture math isn't about profitability — it's about growth velocity and exit size. Profit-taking at early stage kills the thesis.</li>
+        <li>Angels expect 9 out of 10 to fail. The 1 winner must return the entire portfolio — which means 100× potential is the minimum bar.</li>
+        <li>VC funds run on 10-year clocks. If a startup can't exit in 5–7 years, it structurally doesn't fit the instrument.</li>
+        <li>Strategic exits ($50M+ revenue, 5–10× revenue multiples) are the only exits that justify venture risk. PE buyouts at 3–4× EBITDA are founder wins, not angel wins.</li>
+        <li>IRR is time-sensitive. The same 2× return in 2 years (41% IRR) vs 5 years (15% IRR) are completely different outcomes.</li>
+        <li>In Bangladesh, play with local wisdom: seek cross-border scalable founders, structure partial liquidity exits, and get in early on the right category.</li>
+        <li>If angels don't understand the math, they'll always think startups are overvalued. If they do, they'll spot which ones are underpriced.</li>
+      </ul>
+    </div>
+
+    <!-- PART NAV -->
+    <div class="part-nav">
+      <a href="traction-based-angel-investing-part-9.html" class="part-nav-card prev">
+        <span class="nav-direction">← Previous Article</span>
+        <span class="nav-title">Understanding Runway Can Skyrocket Your Investment IQ</span>
+      </a>
+      <a href="https://blog.capallo.co" class="part-nav-card" style="text-align:right;">
+        <span class="nav-direction">Browse All Articles →</span>
+        <span class="nav-title">More venture investing insights</span>
+      </a>
+    </div>
+
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.capallo.co/posts/traction-based-angel-investing-part-10.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://wa.me/?text=Master venture math to simplify angel investing — why 100x is the minimum bar: https://blog.capallo.co/posts/traction-based-angel-investing-part-10.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp
+      </a>
+      <a href="https://twitter.com/intent/tweet?text=Most startups don't get rejected because their idea is bad — they get rejected because the venture math doesn't add up&url=https://blog.capallo.co/posts/traction-based-angel-investing-part-10.html" target="_blank" class="share-btn">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+    </div>
+
+    <div class="coffee-cta">
+      <p>If this finally made venture math click for you — and you're now seeing deals differently — consider supporting the work.</p>
+      <a href="https://supportkori.com/capallo" target="_blank" class="coffee-btn">☕ Buy Us a Coffee</a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list" id="toc">
+        <li><a href="#myth">The Myth of Profitability</a></li>
+        <li><a href="#worldview">How Angels Actually Think</a></li>
+        <li><a href="#rocket">Rocket vs Turtle</a></li>
+        <li><a href="#revenue-rule">The $50M Revenue Rule</a></li>
+        <li><a href="#math">The Math Behind the Madness</a></li>
+        <li><a href="#irr">IRR — Why Time Is Capital</a></li>
+        <li><a href="#exits">The Illusion of Small Exits</a></li>
+        <li><a href="#bd-play">Playing With Local Wisdom</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Ready to Invest?</h4>
+      <p>Capallo surfaces deals where the venture math actually works — vetted traction, clear exit paths, investor protection built in.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7-AduLFUV5Oeg2p4J_0ep6Ppa2H7W8WnXfISNAfYqsY2RGg/viewform?usp=header" target="_blank">Complete Investor KYC →</a>
+      <a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank" class="outline">Schedule a Call</a>
+    </div>
+
+    <div class="sidebar-card" style="border-left: 4px solid var(--gold);">
+      <h4>Risk Disclaimer</h4>
+      <p style="font-size:0.83rem; color:var(--body); line-height:1.65;">Private market investments are highly speculative. You may lose your entire investment. This article is educational and does not constitute financial advice. <a href="https://capallo.co/#risk-disclaimer" style="color:var(--navy); font-weight:600;">Read full disclaimer →</a></p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand-row">
+      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
+      <div class="footer-legal">
+        <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
+        <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
+        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').style.boxShadow =
+      window.scrollY > 60 ? '0 2px 12px rgba(0,0,0,0.1)' : '0 1px 3px rgba(0,0,0,0.05)';
+  });
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('#toc a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    tocLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
