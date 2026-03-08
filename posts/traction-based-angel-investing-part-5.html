@@ -208,15 +208,21 @@
     .back-link svg { transition: transform 0.2s; }
     .back-link:hover svg { transform: translateX(-3px); }
 
-    footer { background: var(--near-black); color: #9ca3af; padding: 50px 3rem 25px; margin-top: 4rem; }
+    footer { background: var(--near-black); color: #9ca3af; padding: 60px 3rem 30px; margin-top: 4rem; }
     .footer-inner { max-width: 1400px; margin: 0 auto; }
-    .footer-brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
-    .footer-brand-row img { height: 32px; }
-    .footer-brand-row p { color: #9ca3af; font-size: 0.88rem; max-width: 500px; line-height: 1.6; }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; padding-top: 1.5rem; border-top: 1px solid #374151; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid #374151; }
+    .footer-brand img { height: 35px; margin-bottom: 1rem; }
+    .footer-brand p { line-height: 1.7; font-size: 0.9rem; margin-bottom: 1.5rem; max-width: 320px; }
+    .footer-col h4 { color: var(--gold); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul li a { color: #9ca3af; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; }
     .footer-bottom a { color: #6b7280; text-decoration: none; transition: color 0.2s; }
     .footer-bottom a:hover { color: white; }
     .footer-legal { display: flex; gap: 1.5rem; }
+    @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr; gap: 2rem; } }
 
     @media (max-width: 1024px) {
       .article-layout { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -525,16 +531,54 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand-row">
-      <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
-      <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="https://capallo.co"><img src="https://i.imgur.com/1fRr4Cy.png" alt="Capallo"></a>
+        <p>Bangladesh's first fraud-protected venture investing platform. Connecting institutional-grade investors with the country's most promising founders.</p>
+        <div style="display:flex;gap:0.75rem;">
+          <a href="https://www.linkedin.com/company/capallo/" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#0077b5'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="http://wa.me/+8801645823853" target="_blank" style="width:36px;height:36px;background:rgba(255,255,255,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#25d366'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="https://blog.capallo.co/posts/angel-investing-bangladesh.html">Intro: Angel Investing in BD</a></li>
+          <li><a href="https://blog.capallo.co/posts/traction-based-angel-investing-part-1.html">Traction-Based Investing</a></li>
+          <li><a href="https://blog.capallo.co/posts/traction-based-angel-investing-part-5.html">Due Diligence Checklist</a></li>
+          <li><a href="https://blog.capallo.co/posts/traction-based-angel-investing-part-13.html">Silent Investing Guide</a></li>
+          <li><a href="https://blog.capallo.co/posts/traction-based-angel-investing-part-16.html">Bangladesh Scam History</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Capallo</h4>
+        <ul>
+          <li><a href="https://capallo.co/#investors">For Investors</a></li>
+          <li><a href="https://capallo.co/#founders">For Founders</a></li>
+          <li><a href="https://capallo.co/#about">About Us</a></li>
+          <li><a href="https://capallo.co/#contact">Contact</a></li>
+          <li><a href="https://capallo.co/#risk-disclaimer">Risk Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://calendar.app.google/xWeHjJBs1MCDkaUh8" target="_blank">Schedule a Call</a></li>
+          <li><a href="mailto:hello@capallo.co">Email Us</a></li>
+          <li><a href="http://wa.me/+8801645823853" target="_blank">WhatsApp</a></li>
+          <li><a href="https://supportkori.com/capallo" target="_blank">☕ Buy Us a Coffee</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Capallo. All rights reserved. | blog.capallo.co</p>
       <div class="footer-legal">
         <a href="https://capallo.co/privacy_policy.html">Privacy Policy</a>
         <a href="https://capallo.co/terms_of_service.html">Terms of Service</a>
-        <a href="https://supportkori.com/capallo" target="_blank">☕ Support Us</a>
       </div>
     </div>
   </div>
